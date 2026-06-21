@@ -128,7 +128,7 @@
     }
     #menu {
       padding: 68px 0 76px !important;
-      margin-top: 16px !important;
+      margin-top: 0 !important;
     }
     #menu > div {
       max-width: 1120px !important;
@@ -543,14 +543,30 @@ class Component extends DCLogic {
     };
     // wait a tick so refs/DOM are settled
     setTimeout(run, 60);
-    setTimeout(() => {
-      if (!window.location.hash) return;
-      const id = window.location.hash.slice(1);
+    const scrollToSection = (id, updateHash = true) => {
       const target = document.getElementById(id);
       if (!target) return;
       target.style.opacity = '1';
       target.style.transform = 'none';
-      target.scrollIntoView({ block: 'start' });
+      const nav = document.querySelector('nav[data-nav]');
+      const navH = nav ? nav.getBoundingClientRect().height : 0;
+      const top = target.getBoundingClientRect().top + window.pageYOffset - navH - 1;
+      window.scrollTo({ top: Math.max(0, top), behavior: updateHash ? 'smooth' : 'auto' });
+      if (updateHash) history.pushState(null, '', '#' + id);
+    };
+    this._onNavClick = (event) => {
+      const link = event.target.closest && event.target.closest('nav[data-nav] a[href^="#"]');
+      if (!link) return;
+      const id = link.getAttribute('href').slice(1);
+      if (!id) return;
+      event.preventDefault();
+      scrollToSection(id);
+    };
+    document.addEventListener('click', this._onNavClick);
+    setTimeout(() => {
+      if (!window.location.hash) return;
+      const id = window.location.hash.slice(1);
+      scrollToSection(id, false);
     }, 180);
     setTimeout(() => {
       const visible = document.querySelectorAll('[data-reveal]');
@@ -567,6 +583,7 @@ class Component extends DCLogic {
   componentWillUnmount() {
     if (this._raf) cancelAnimationFrame(this._raf);
     if (this._onResize) window.removeEventListener('resize', this._onResize);
+    if (this._onNavClick) document.removeEventListener('click', this._onNavClick);
   }
 
   get categories() {
