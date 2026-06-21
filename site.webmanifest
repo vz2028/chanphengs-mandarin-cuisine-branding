@@ -1,0 +1,13 @@
+{
+  "name": "Chanpheng's Mandarin Cuisine",
+  "short_name": "Chanpheng's",
+  "description": "Family-run Mandarin restaurant at 1140 Mangrove Ave in Chico, CA.",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "background_color": "#FAF6EE",
+  "theme_color": "#1A1410",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any" }
+  ]
+}
