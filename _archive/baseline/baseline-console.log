@@ -1,0 +1,12 @@
+[desktop-1440x900] info: %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[desktop-1440x900] info: [dc-runtime] x-import: loading ./image-slot.js (js)
+[desktop-1440x900] info: [dc-runtime] x-import: loaded ./image-slot.js — exports: [] window globals: []
+[desktop-1440x900] debug: Search endpoint requested!
+[tablet-768x1024] info: %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[tablet-768x1024] info: [dc-runtime] x-import: loading ./image-slot.js (js)
+[tablet-768x1024] info: [dc-runtime] x-import: loaded ./image-slot.js — exports: [] window globals: []
+[tablet-768x1024] debug: Search endpoint requested!
+[mobile-390x844] info: %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+[mobile-390x844] info: [dc-runtime] x-import: loading ./image-slot.js (js)
+[mobile-390x844] info: [dc-runtime] x-import: loaded ./image-slot.js — exports: [] window globals: []
+[mobile-390x844] debug: Search endpoint requested!

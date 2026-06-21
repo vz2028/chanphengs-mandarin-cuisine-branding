@@ -1,0 +1,32 @@
+# Editor / design-tool artifacts
+.image-slots.state.json
+.thumbnail
+*.dc.html
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local server logs
+/tmp/cp-server.log
+
+# Large binary baseline captures — keep small PNGs in git, skip HARs and videos
+_archive/baseline/*.har
+_archive/baseline/*.mov
+_archive/baseline/*.mp4
+_archive/baseline/*.webm
+
+# Python / Playwright local installs
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+
+# Claude Code local session state
+.claude/
