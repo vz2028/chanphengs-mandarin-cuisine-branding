@@ -2,7 +2,7 @@
 
 The one-page brochure site for [cpmandarincuisine.com](https://cpmandarincuisine.com/).
 
-Plain HTML + CSS + a small vanilla-JS file. No build step, no framework, no `npm install` required to deploy.
+Plain HTML + CSS, with the exported page runtime kept in `support.js`. No build step and no `npm install` required to deploy.
 
 ## File layout
 
@@ -16,16 +16,17 @@ Plain HTML + CSS + a small vanilla-JS file. No build step, no framework, no `npm
 ├── site.webmanifest        ← PWA basics
 ├── robots.txt              ← tells Google what to crawl
 ├── sitemap.xml             ← Google's roadmap of the site
+├── support.js              ← exported page runtime used by index.html
+├── image-slot.js           ← image component used by the favorite-dishes grid
+├── image-slots.state.json  ← persisted favorite-dish image data
 ├── assets/
 │   ├── css/main.css        ← every visual style lives here
-│   ├── js/main.js          ← menu tabs + marquee arrows + scroll reveal
 │   └── img/
 │       ├── og-cover.jpg    ← social-share preview (Facebook, Twitter, etc.)
 │       └── dishes/         ← the 10 dish photos
 ├── netlify.toml            ← Netlify publish settings (no build step)
-├── .netlifyignore          ← keeps planning/archive files off the live site
-├── .planning/              ← project planning docs (not deployed)
-└── _archive/               ← old files kept for reference (not deployed)
+├── .netlifyignore          ← keeps planning/local metadata off the live site
+└── .planning/              ← project planning docs (not deployed)
 ```
 
 ## How to make common edits
@@ -115,8 +116,8 @@ That's it — no build step.
 
 ## What's intentionally NOT in this codebase
 
-- No bundler (Vite, webpack, Parcel). The site is small enough that one HTML file + one CSS file + one JS file is the right shape.
-- No framework (React, Vue). All content is in the HTML; the menu uses 80 lines of vanilla JS for tab switching.
+- No bundler (Vite, webpack, Parcel). The site is small enough that static HTML/CSS plus the exported runtime is the right shape.
+- No app framework source tree. The production page is the exported static artifact in `index.html`.
 - No test suite. Visual changes are verified by eye; functional changes are caught by the few `<a>`/`<img>` tags that exist.
 - No analytics. Easy to add later (Plausible, GA4) by dropping a single `<script>` into `index.html`.
 
