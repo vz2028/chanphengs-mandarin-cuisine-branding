@@ -22,8 +22,8 @@ Plain HTML + CSS + a small vanilla-JS file. No build step, no framework, no `npm
 │   └── img/
 │       ├── og-cover.jpg    ← social-share preview (Facebook, Twitter, etc.)
 │       └── dishes/         ← the 10 dish photos
-├── .github/workflows/
-│   └── deploy.yml          ← auto-deploys to Namecheap on push to main
+├── netlify.toml            ← Netlify publish settings (no build step)
+├── .netlifyignore          ← keeps planning/archive files off the live site
 ├── .planning/              ← project planning docs (not deployed)
 └── _archive/               ← old files kept for reference (not deployed)
 ```
@@ -69,40 +69,30 @@ Open `assets/css/main.css`. The `:root { ... }` block at the top defines:
 
 Change a value here and it propagates everywhere.
 
-## Deployment — push to GitHub, the site updates
+## Deployment — Netlify (free)
 
-A GitHub Actions workflow (`.github/workflows/deploy.yml`) deploys the site to Namecheap shared hosting via FTP every time you push to `main`.
+[Netlify](https://www.netlify.com/) hosts the site and auto-deploys on every push to `main`. No Namecheap hosting or FTP credentials needed — only your domain DNS at Namecheap.
 
 ### One-time setup
 
-1. **Push this repo to GitHub.** Create a new repository (private is fine), then:
-   ```bash
-   git remote add origin https://github.com/<you>/<repo>.git
-   git push -u origin main
-   ```
-2. **Get your FTP credentials from Namecheap.** Log into Namecheap → cPanel → "FTP Accounts." You need:
-   - **Server** (looks like `server###.web-hosting.com`)
-   - **Username** (looks like `youraccount@cpmandarincuisine.com` or just `youraccount`)
-   - **Password**
-3. **Add them as GitHub secrets.** In your GitHub repo: Settings → Secrets and variables → Actions → "New repository secret." Create:
-   - `FTP_SERVER` — the server hostname
-   - `FTP_USERNAME` — the FTP user
-   - `FTP_PASSWORD` — the FTP password
-4. **Push any change to `main`.** GitHub will run the workflow (Actions tab) and sync your files to Namecheap's `public_html/` folder. After 1–2 minutes the live site updates.
+1. **Sign up at [netlify.com](https://www.netlify.com/)** with your GitHub account (free).
+2. **Add new site → Import from GitHub** → pick `chanphengs-mandarin-cuisine-branding`. Grant Netlify access to the private repo if prompted.
+3. **Build settings:**
+   - Build command: *(leave blank)*
+   - Publish directory: `.` (root)
+   - Click **Deploy site**. In ~30 seconds you'll get a `*.netlify.app` preview URL.
+4. **Add your custom domain:** Site settings → Domain management → **Add domain** → `cpmandarincuisine.com` (and optionally `www.cpmandarincuisine.com`).
+5. **Update DNS at Namecheap** (Domain List → Manage → Advanced DNS):
+   - **A record** — Host `@`, Value `75.2.60.5` (Netlify load balancer)
+   - **CNAME record** — Host `www`, Value `<your-site-name>.netlify.app` (Netlify shows the exact value)
+   - **Leave MX records alone** if you use email at `@cpmandarincuisine.com`.
+6. Back in Netlify: **Verify DNS** → **Provision SSL certificate**. HTTPS is free and auto-renewed.
 
-### Make sure SSL is on (one-time, in cPanel)
+After setup, every `git push` to `main` triggers a new deploy automatically.
 
-In Namecheap cPanel → "SSL/TLS Status" → enable AutoSSL for `cpmandarincuisine.com`. This gives you free HTTPS. After the first deploy, visit `https://cpmandarincuisine.com/` to confirm the green padlock.
+### Branded 404 page
 
-### After first deploy: branded 404 page
-
-If you visit a random URL like `https://cpmandarincuisine.com/anything` and see the generic Namecheap error page instead of our branded `404.html`, create a tiny file called `.htaccess` in `public_html/` containing:
-
-```apache
-ErrorDocument 404 /404.html
-```
-
-(One-time, then you'll see our 404 for missing pages.)
+Netlify serves `404.html` from the repo root for missing URLs — no `.htaccess` needed.
 
 ### Submit sitemap to Google (one-time)
 

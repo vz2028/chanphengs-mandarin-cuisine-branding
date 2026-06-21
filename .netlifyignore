@@ -1,0 +1,9 @@
+# Repo metadata and planning — not part of the live site
+.github/
+.planning/
+_archive/
+.claude/
+README.md
+.gitignore
+netlify.toml
+.netlifyignore
