@@ -17,7 +17,10 @@
 <meta property="og:description" content="Family-run Mandarin restaurant in Chico, CA. Time-honored recipes, fresh ingredients.">
 <meta property="og:url" content="https://cpmandarincuisine.com/">
 <meta property="og:image" content="https://cpmandarincuisine.com/assets/img/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cpmandarincuisine.com/assets/img/og-cover.jpg">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -45,12 +48,41 @@
   [data-fav-grid] > * { overflow: hidden !important; border-radius: 14px; min-width: 0; }
   [data-fav-grid] image-slot { width: 100% !important; height: 100% !important; min-width: 0 !important; min-height: 0 !important; display: block !important; }
   @media (min-width: 1100px) {
+    nav[data-nav] {
+      padding: 10px 40px !important;
+    }
+    nav[data-nav] a[href="#top"] {
+      gap: 10px !important;
+    }
+    nav[data-nav] a[href="#top"] > span:first-child {
+      width: 32px !important;
+      height: 32px !important;
+    }
+    nav[data-nav] a[href="#top"] > span:first-child span {
+      font-size: 16px !important;
+    }
+    nav[data-nav] a[href="#top"] > span:last-child > span:first-child {
+      font-size: 19px !important;
+    }
+    [data-nav-sub] {
+      font-size: 10px !important;
+      letter-spacing: .28em !important;
+    }
+    [data-nav-links] {
+      gap: 30px !important;
+      font-size: 13px !important;
+    }
+    [data-nav-cta] {
+      padding: 9px 20px !important;
+      font-size: 12.5px !important;
+      box-shadow: 0 5px 14px rgba(201,162,75,0.22) !important;
+    }
     #top {
-      min-height: 88vh !important;
+      min-height: 100vh !important;
       align-items: center !important;
     }
     [data-hero-marquee] {
-      --tile-h: min(42vh, 390px);
+      --tile-h: min(56vh, 560px);
       align-items: center !important;
     }
     [data-hero-text] {
@@ -92,7 +124,7 @@
       line-height: 1.68 !important;
     }
     [data-fav-grid] {
-      height: min(42vh, 320px) !important;
+      height: min(46vh, 360px) !important;
     }
     #menu {
       padding: 68px 0 76px !important;
@@ -166,6 +198,19 @@
     [data-footer-cta] { grid-column: 1 / -1 !important; }
     [data-hero-text] h1 { font-size: 42px !important; }
     [data-hero-text] { padding: 104px 22px 264px !important; }
+    [data-hero-ctas] {
+      display: grid !important;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) !important;
+      gap: 10px !important;
+    }
+    [data-hero-ctas] a {
+      width: 100% !important;
+      min-width: 0 !important;
+      padding: 13px 10px !important;
+      font-size: 12px !important;
+      letter-spacing: .08em !important;
+      white-space: nowrap !important;
+    }
     [data-fav-grid] { grid-template-columns: repeat(3, minmax(0,1fr)) !important; grid-template-rows: 1fr !important; height: 124px !important; gap: 10px !important; }
     [data-fav-grid] > *:first-child { grid-row: auto !important; }
   }
@@ -209,7 +254,7 @@
       </div>
       <h1 style="font-family:'Playfair Display',serif; font-weight:800; color:#FAF6EE; font-size:clamp(46px,7vw,86px); line-height:1.02; margin:0 0 22px; letter-spacing:-0.5px;">Traditional flavors,<br><em style="font-style:italic; font-weight:600; color:#E7C77B;">crafted fresh.</em></h1>
       <p style="color:rgba(250,246,238,0.82); font-size:clamp(16px,1.5vw,19px); line-height:1.6; max-width:520px; margin:0 0 36px; font-weight:300;">Wok-fired to order with time-honored Mandarin recipes. Dine in, take out, or have it delivered.</p>
-      <div style="display:flex; flex-wrap:wrap; gap:14px;">
+      <div data-hero-ctas style="display:flex; flex-wrap:wrap; gap:14px;">
         <a href="https://www.doordash.com/store/chan-pheng%E2%80%99s-mandarin-cuisine-chico-34992320/?utm_campaign=gpa&amp;pickup=true" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; justify-content:center; padding:17px 34px; border-radius:3px; background:#C9A24B; color:#1A1410; font-weight:600; font-size:14px; letter-spacing:.12em; text-transform:uppercase; text-decoration:none; box-shadow:0 12px 30px rgba(201,162,75,0.3); transition:transform .25s ease, box-shadow .25s ease;" style-hover="transform:translateY(-3px); box-shadow:0 18px 40px rgba(201,162,75,0.46);">Order Now</a>
         <a href="tel:+15308946888" style="display:inline-flex; align-items:center; justify-content:center; padding:17px 30px; border-radius:3px; background:transparent; color:#FAF6EE; font-weight:600; font-size:14px; letter-spacing:.12em; text-transform:uppercase; text-decoration:none; border:1.5px solid rgba(250,246,238,0.45); transition:border-color .25s ease, background .25s ease;" style-hover="border-color:#C9A24B; background:rgba(201,162,75,0.12);">Call (530) 894-6888</a>
       </div>
