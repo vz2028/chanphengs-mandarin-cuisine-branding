@@ -1,620 +1,681 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1A1410">
-
-  <!-- ============================================================
-       EDITING CONSTANTS (search-and-replace these in one place)
-       Restaurant:  Chanpheng's Mandarin Cuisine
-       Address:     1140 Mangrove Ave, Suite E, Chico, CA 95926
-       Phone:       (530) 894-6888  (tel:+15308946888)
-       DoorDash:    https://www.doordash.com/store/chan-pheng%E2%80%99s-mandarin-cuisine-chico-34992320/?utm_campaign=gpa&pickup=true
-       Hours:       Tue–Sun 11:00 AM – 8:30 PM  /  Monday closed
-       ============================================================ -->
-
-  <title>Chanpheng's Mandarin Cuisine — Authentic Mandarin in Chico, CA</title>
-  <meta name="description" content="Family-run Mandarin restaurant at 1140 Mangrove Ave in Chico, CA. Time-honored recipes, fresh ingredients. Order on DoorDash or call (530) 894-6888.">
-  <link rel="canonical" href="https://cpmandarincuisine.com/">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="restaurant.restaurant">
-  <meta property="og:site_name" content="Chanpheng's Mandarin Cuisine">
-  <meta property="og:title" content="Chanpheng's Mandarin Cuisine — Authentic Mandarin in Chico, CA">
-  <meta property="og:description" content="Family-run Mandarin restaurant at 1140 Mangrove Ave in Chico, CA. Order on DoorDash or call (530) 894-6888.">
-  <meta property="og:url" content="https://cpmandarincuisine.com/">
-  <meta property="og:image" content="https://cpmandarincuisine.com/assets/img/og-cover.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="en_US">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Chanpheng's Mandarin Cuisine — Authentic Mandarin in Chico, CA">
-  <meta name="twitter:description" content="Family-run Mandarin restaurant at 1140 Mangrove Ave in Chico, CA.">
-  <meta name="twitter:image" content="https://cpmandarincuisine.com/assets/img/og-cover.jpg">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Work+Sans:wght@300;400;500;600&family=Noto+Serif+SC:wght@500;700;900&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="/assets/css/main.css">
-
-  <!-- Restaurant structured data for Google rich results -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "Chanpheng's Mandarin Cuisine",
-    "image": "https://cpmandarincuisine.com/assets/img/og-cover.jpg",
-    "url": "https://cpmandarincuisine.com/",
-    "telephone": "+1-530-894-6888",
-    "priceRange": "$$",
-    "servesCuisine": ["Chinese", "Mandarin"],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "1140 Mangrove Ave, Suite E",
-      "addressLocality": "Chico",
-      "addressRegion": "CA",
-      "postalCode": "95926",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 39.74865,
-      "longitude": -121.83930
-    },
-    "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "11:00", "closes": "20:30" }
-    ],
-    "sameAs": [
-      "https://www.doordash.com/store/chan-pheng%E2%80%99s-mandarin-cuisine-chico-34992320/"
-    ]
-  }
-  </script>
-
-  <!-- Interactivity (tabs + marquee arrows + scroll-reveal) -->
-  <script src="/assets/js/main.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1A1410">
+<title>Chanpheng's Mandarin Cuisine — Authentic Mandarin in Chico, CA</title>
+<meta name="description" content="Family-run Mandarin restaurant at 1140 Mangrove Ave in Chico, CA. Time-honored recipes, fresh ingredients. Order on DoorDash or call (530) 894-6888.">
+<link rel="canonical" href="https://cpmandarincuisine.com/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:site_name" content="Chanpheng's Mandarin Cuisine">
+<meta property="og:title" content="Chanpheng's Mandarin Cuisine — Authentic Mandarin in Chico, CA">
+<meta property="og:description" content="Family-run Mandarin restaurant in Chico, CA. Time-honored recipes, fresh ingredients.">
+<meta property="og:url" content="https://cpmandarincuisine.com/">
+<meta property="og:image" content="https://cpmandarincuisine.com/assets/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script src="./support.js"></script>
 </head>
 <body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Work+Sans:wght@300;400;500;600&family=Noto+Serif+SC:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: 'Work Sans', system-ui, sans-serif; color: #1A1410; background: #FAF6EE; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #C9A24B; color: #1A1410; }
+  ::-webkit-scrollbar { height: 8px; }
+  ::-webkit-scrollbar-thumb { background: rgba(139,26,26,.3); border-radius: 8px; }
+  @keyframes floatA { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-18px); } }
+  @keyframes floatB { 0%,100% { transform: translateY(0); } 50% { transform: translateY(15px); } }
+  @keyframes floatC { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-13px); } }
+  @keyframes floatD { 0%,100% { transform: translateY(0); } 50% { transform: translateY(16px); } }
+  @keyframes floatE { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-33.333%); } }
+  @keyframes marquee-v { from { transform: translateY(0); } to { transform: translateY(-33.333%); } }
+  @keyframes tileBob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+  @keyframes tileGleam { 0% { transform: translateX(-120%) skewX(-18deg); } 60%,100% { transform: translateX(320%) skewX(-18deg); } }
+  [data-fav-grid] > * { overflow: hidden !important; border-radius: 14px; min-width: 0; }
+  [data-fav-grid] image-slot { width: 100% !important; height: 100% !important; min-width: 0 !important; min-height: 0 !important; display: block !important; }
+  @media (max-width: 1099px) {
+    nav[data-nav] { padding: 14px 20px !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; background: rgba(26,20,16,0.94) !important; }
+    [data-nav-links] { display: none !important; }
+    #top { min-height: 0 !important; }
+    [data-hero-marquee] {
+      left: 0 !important; right: 0 !important; top: auto !important; bottom: 0 !important;
+      height: 232px !important; --tile-h: 196px;
+      -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%) !important;
+      mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%) !important;
+    }
+    [data-marquee-controls] { top: auto !important; bottom: 100px !important; right: 14px !important; transform: none !important; }
+    [data-hero-text] { padding: 116px 24px 272px !important; max-width: none !important; }
+    #about { grid-template-columns: minmax(0,1fr) !important; gap: 36px !important; padding: 72px 24px 48px !important; }
+    #visit { padding: 72px 24px !important; }
+    [data-visit-grid] { grid-template-columns: minmax(0,1fr) !important; gap: 32px !important; }
+    [data-menu-grid] { grid-template-columns: minmax(0,1fr) !important; }
+    [data-fav-grid] > * { min-width: 0 !important; min-height: 0 !important; }
+    footer[data-footer] { padding: 56px 24px 32px !important; }
+    [data-footer-grid] { grid-template-columns: minmax(0,1fr) minmax(0,1fr) !important; gap: 28px !important; }
+  }
+  @media (max-width: 560px) {
+    nav[data-nav] { padding: 11px 16px !important; gap: 10px !important; }
+    [data-nav-sub] { display: none !important; }
+    [data-nav] a[href="#top"] span:last-child span:first-child,
+    [data-nav] a[href="#top"] > span:last-child > span { font-size: 18px !important; }
+    [data-nav-cta] { padding: 9px 15px !important; font-size: 12px !important; }
+    [data-about-wm] { font-size: 190px !important; top: 28px !important; bottom: auto !important; right: -24px !important; }
+    [data-footer-grid] { grid-template-columns: 1fr 1fr !important; gap: 26px 22px !important; }
+    [data-footer-brand] { grid-column: 1 / -1 !important; }
+    [data-footer-cta] { grid-column: 1 / -1 !important; }
+    [data-hero-text] h1 { font-size: 42px !important; }
+    [data-hero-text] { padding: 104px 22px 264px !important; }
+    [data-fav-grid] { grid-template-columns: repeat(3, minmax(0,1fr)) !important; grid-template-rows: 1fr !important; height: 124px !important; gap: 10px !important; }
+    [data-fav-grid] > *:first-child { grid-row: auto !important; }
+  }
+</style>
+</helmet>
+<div ref="{{ rootRef }}" style="position:relative; overflow-x:hidden;">
 
-<a class="skip-link" href="#main">Skip to main content</a>
+  <!-- ===== NAV ===== -->
+  <nav data-nav style="position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 40px; background:rgba(26,20,16,0.78); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid rgba(201,162,75,0.22);">
+    <a href="#top" style="display:flex; align-items:center; gap:12px; text-decoration:none; white-space:nowrap;">
+      <span style="display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:50%; background:#8B1A1A; border:1.5px solid #C9A24B; box-shadow:inset 0 0 0 3px rgba(201,162,75,0.18); flex:none;">
+        <span style="font-family:'Noto Serif SC',serif; font-weight:700; font-size:20px; color:#E7C77B; line-height:1;">福</span>
+      </span>
+      <span style="display:flex; align-items:baseline; gap:9px;">
+        <span style="font-family:'Playfair Display',serif; font-weight:800; font-size:22px; color:#FAF6EE; letter-spacing:.3px;">Chanpheng's</span>
+        <span data-nav-sub style="font-family:'Work Sans',sans-serif; font-weight:400; font-size:12px; letter-spacing:.32em; text-transform:uppercase; color:#C9A24B;">Mandarin</span>
+      </span>
+    </a>
+    <div data-nav-links style="display:flex; align-items:center; gap:34px; font-size:14px; letter-spacing:.04em;">
+      <a href="#menu" style="color:rgba(250,246,238,0.82); text-decoration:none;" style-hover="color:#C9A24B; text-decoration:none;">Menu</a>
+      <a href="#about" style="color:rgba(250,246,238,0.82); text-decoration:none;" style-hover="color:#C9A24B; text-decoration:none;">About</a>
+      <a href="#visit" style="color:rgba(250,246,238,0.82); text-decoration:none;" style-hover="color:#C9A24B; text-decoration:none;">Hours</a>
+      <a href="#visit" style="color:rgba(250,246,238,0.82); text-decoration:none;" style-hover="color:#C9A24B; text-decoration:none;">Contact</a>
+    </div>
+    <a data-nav-cta href="https://www.doordash.com/store/chan-pheng%E2%80%99s-mandarin-cuisine-chico-34992320/?utm_campaign=gpa&amp;pickup=true" target="_blank" rel="noopener" style="white-space:nowrap; padding:11px 22px; border-radius:999px; background:#C9A24B; color:#1A1410; font-weight:600; font-size:13.5px; letter-spacing:.03em; text-decoration:none; box-shadow:0 6px 18px rgba(201,162,75,0.28); transition:transform .25s ease, box-shadow .25s ease;" style-hover="transform:translateY(-2px); box-shadow:0 10px 26px rgba(201,162,75,0.42);">Order on DoorDash</a>
+  </nav>
 
-<!-- ===== NAV ===== -->
-<nav class="nav" aria-label="Primary">
-  <a class="nav__brand" href="#top" aria-label="Chanpheng's Mandarin Cuisine — back to top">
-    <span class="nav__logo" aria-hidden="true"><span>福</span></span>
-    <span class="nav__wordmark">
-      <span class="nav__name">Chanpheng's</span>
-      <span class="nav__sub">Mandarin</span>
-    </span>
-  </a>
-  <div class="nav__links">
-    <a class="nav__link" href="#menu">Menu</a>
-    <a class="nav__link" href="#about">About</a>
-    <a class="nav__link" href="#visit">Hours</a>
-    <a class="nav__link" href="#visit">Contact</a>
-  </div>
-  <a class="cta-doordash" href="https://www.doordash.com/store/chan-pheng%E2%80%99s-mandarin-cuisine-chico-34992320/?utm_campaign=gpa&amp;pickup=true" target="_blank" rel="noopener">Order on DoorDash</a>
-</nav>
+  <!-- ===== HERO ===== -->
+  <header id="top" style="position:relative; min-height:94vh; display:flex; align-items:flex-end; overflow:hidden; background:radial-gradient(135% 115% at 80% 24%, #4a2c1d 0%, #2a1a13 42%, #150e0a 100%);">
+    <div aria-hidden="true" style="position:absolute; inset:0; z-index:1; background:linear-gradient(105deg, rgba(18,12,9,0.95) 0%, rgba(18,12,9,0.66) 32%, rgba(18,12,9,0.12) 60%, rgba(18,12,9,0) 100%);"></div>
+    <div aria-hidden="true" style="position:absolute; inset:0; z-index:1; background:linear-gradient(0deg, rgba(18,12,9,0.62) 0%, rgba(18,12,9,0) 44%);"></div>
+    <div data-hero-marquee style="position:absolute; top:0; bottom:0; right:0; left:clamp(380px, 42vw, 640px); z-index:2; overflow:hidden; display:flex; align-items:center; justify-content:flex-start;">{{ marqueeTrack }}</div>
+    <div data-marquee-controls style="position:absolute; top:50%; right:24px; transform:translateY(-50%); z-index:4;">
+      <button onClick="{{ mqNext }}" aria-label="Next dish" style="width:54px; height:54px; border:none; background:transparent; color:rgba(250,246,238,0.55); font-size:40px; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:color .25s ease, transform .25s ease;" style-hover="color:#E7C77B; transform:translateX(4px);">&#8250;</button>
+    </div>
+    <div data-hero-text style="position:relative; z-index:3; padding:0 40px 88px; max-width:620px;">
+      <div style="display:flex; align-items:center; flex-wrap:wrap; gap:14px; margin-bottom:24px;">
+        <span style="width:34px; height:1px; background:#C9A24B; display:inline-block;"></span>
+        <span style="font-family:'Noto Serif SC',serif; font-weight:500; font-size:16px; letter-spacing:0.14em; color:#C9A24B;">正宗中国菜</span>
+        <span style="font-size:12.5px; letter-spacing:.3em; text-transform:uppercase; color:#C9A24B; font-weight:500;">&middot;&ensp;Chico, California</span>
+      </div>
+      <h1 style="font-family:'Playfair Display',serif; font-weight:800; color:#FAF6EE; font-size:clamp(46px,7vw,86px); line-height:1.02; margin:0 0 22px; letter-spacing:-0.5px;">Traditional flavors,<br><em style="font-style:italic; font-weight:600; color:#E7C77B;">crafted fresh.</em></h1>
+      <p style="color:rgba(250,246,238,0.82); font-size:clamp(16px,1.5vw,19px); line-height:1.6; max-width:520px; margin:0 0 36px; font-weight:300;">Wok-fired to order with time-honored Mandarin recipes. Dine in, take out, or have it delivered.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:14px;">
+        <a href="https://www.doordash.com/store/chan-pheng%E2%80%99s-mandarin-cuisine-chico-34992320/?utm_campaign=gpa&amp;pickup=true" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; justify-content:center; padding:17px 34px; border-radius:3px; background:#C9A24B; color:#1A1410; font-weight:600; font-size:14px; letter-spacing:.12em; text-transform:uppercase; text-decoration:none; box-shadow:0 12px 30px rgba(201,162,75,0.3); transition:transform .25s ease, box-shadow .25s ease;" style-hover="transform:translateY(-3px); box-shadow:0 18px 40px rgba(201,162,75,0.46);">Order Now</a>
+        <a href="tel:+15308946888" style="display:inline-flex; align-items:center; justify-content:center; padding:17px 30px; border-radius:3px; background:transparent; color:#FAF6EE; font-weight:600; font-size:14px; letter-spacing:.12em; text-transform:uppercase; text-decoration:none; border:1.5px solid rgba(250,246,238,0.45); transition:border-color .25s ease, background .25s ease;" style-hover="border-color:#C9A24B; background:rgba(201,162,75,0.12);">Call (530) 894-6888</a>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:14px 28px; margin-top:38px;">
+        <span style="display:inline-flex; align-items:center; gap:9px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:rgba(250,246,238,0.62); font-weight:500;"><span style="color:#C9A24B; font-size:8px;">&#9670;</span> Delivery by DoorDash</span>
+        <span style="display:inline-flex; align-items:center; gap:9px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:rgba(250,246,238,0.62); font-weight:500;"><span style="color:#C9A24B; font-size:8px;">&#9670;</span> Party Trays Available</span>
+        <span style="display:inline-flex; align-items:center; gap:9px; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:rgba(250,246,238,0.62); font-weight:500;"><span style="color:#C9A24B; font-size:8px;">&#9670;</span> Take Out &middot; Dine In</span>
+      </div>
+    </div>
+  </header>
 
-<main id="main">
+  <!-- ===== ABOUT ===== -->
+  <section id="about" data-reveal style="position:relative; max-width:1120px; margin:0 auto; padding:104px 40px 64px; display:grid; grid-template-columns:1.1fr 0.9fr; gap:64px; align-items:center;">
+    <sc-if value="{{ showWatermarks }}" hint-placeholder-val="{{ true }}"><div data-about-wm aria-hidden="true" style="position:absolute; bottom:-12px; right:-22px; font-family:'Noto Serif SC',serif; font-weight:900; font-size:240px; line-height:1; color:rgba(139,26,26,0.06); pointer-events:none; user-select:none; z-index:0;">福</div></sc-if>
+    <div style="position:relative; z-index:1;">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px;">
+        <span style="width:30px; height:1px; background:#C9A24B; display:inline-block;"></span>
+        <span style="font-family:'Noto Serif SC',serif; font-weight:700; font-size:13px; color:#8B1A1A; letter-spacing:0.12em;">本店</span>
+        <span style="font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:#8B1A1A; font-weight:600;">Our Kitchen</span>
+      </div>
+      <div style="font-family:'Noto Serif SC',serif; font-weight:700; font-size:clamp(21px,2.3vw,29px); color:#8B1A1A; margin:0 0 12px; letter-spacing:0.04em;">炉火纯青 &middot; 用心烹调</div>
+      <h2 style="font-family:'Playfair Display',serif; font-weight:700; font-size:clamp(30px,3.4vw,44px); line-height:1.12; margin:0 0 22px; color:#1A1410;">A family table, served the way it should be.</h2>
+      <p style="font-size:17.5px; line-height:1.78; color:#4a4038; margin:0 0 18px; font-weight:300;">At Chanpheng's Mandarin Cuisine, every dish is wok-fired to order using fresh ingredients and time-honored recipes. From sizzling Szechuan classics to house favorites like Honey Walnut Shrimp and General Tao's Chicken, we bring authentic Mandarin flavors to Chico.</p>
+      <p style="font-size:17.5px; line-height:1.78; color:#4a4038; margin:0; font-weight:300;">Family-owned and made with care — dine in, take out, or have it delivered. <span style="color:#8B1A1A; font-style:italic; font-family:'Playfair Display',serif;">We're glad you're here.</span></p>
+    </div>
+    <sc-if value="{{ showFavorites }}" hint-placeholder-val="{{ true }}">
+    <div data-fav-grid style="position:relative; z-index:1; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:14px; height:380px;">
+      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="fav-1" shape="rounded" radius="14" fit="cover" placeholder="Dish photo" style="grid-row:1 / span 2; width:100%; height:100%;" hint-size="100%,100%"></x-import>
+      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="fav-2" shape="rounded" radius="14" fit="cover" placeholder="Dish" style="width:100%; height:100%;" hint-size="100%,100%"></x-import>
+      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="fav-3" shape="rounded" radius="14" fit="cover" placeholder="Dish" style="width:100%; height:100%;" hint-size="100%,100%"></x-import>
+    </div>
+    </sc-if>
+  </section>
 
-<!-- ===== HERO ===== -->
-<header class="hero" id="top">
-  <div class="hero__watermarks" aria-hidden="true">
-    <div class="hero__wm hero__wm--a">福</div>
-    <div class="hero__wm hero__wm--b">福</div>
-  </div>
+  <!-- ===== MENU ===== -->
+  <section id="menu" data-reveal style="position:relative; background:#1A1410; color:#FAF6EE; padding:96px 0 104px; margin-top:48px;">
+    <sc-if value="{{ showWatermarks }}" hint-placeholder-val="{{ true }}">
+    <div aria-hidden="true" style="position:absolute; top:30px; left:50%; transform:translateX(-50%); font-family:'Noto Serif SC',serif; font-weight:900; font-size:460px; line-height:1; color:rgba(201,162,75,0.045); pointer-events:none; user-select:none;">福</div>
+    <div aria-hidden="true" style="position:absolute; bottom:40px; left:6%; font-family:'Noto Serif SC',serif; font-weight:900; font-size:180px; line-height:1; color:rgba(139,26,26,0.18); pointer-events:none; user-select:none;">福</div>
+    <div aria-hidden="true" style="position:absolute; bottom:80px; right:6%; font-family:'Noto Serif SC',serif; font-weight:900; font-size:180px; line-height:1; color:rgba(139,26,26,0.18); pointer-events:none; user-select:none;">福</div>
+    </sc-if>
+    <div style="position:relative; max-width:1040px; margin:0 auto; padding:0 40px;">
+      <div style="text-align:center; margin-bottom:42px;">
+        <div style="font-family:'Noto Serif SC',serif; font-weight:900; font-size:clamp(46px,6vw,74px); letter-spacing:0.2em; color:#C9A24B; line-height:1;">菜&ensp;单</div>
+        <div style="margin-top:14px; font-family:'Playfair Display',serif; font-size:clamp(15px,1.7vw,21px); letter-spacing:.44em; text-transform:uppercase; color:rgba(250,246,238,0.66);">Our Menu</div>
+        <p style="margin:24px auto 0; color:rgba(250,246,238,0.55); font-size:14.5px;"><span style="color:#E07A52;">🌶</span> denotes a spicy dish &middot; ask us to adjust the spice level</p>
+      </div>
 
-  <div class="hero__text">
-    <div class="hero__eyebrow">
-      <span class="zh">正宗中国菜</span>
+      <!-- Tabs -->
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-bottom:48px;">
+        <sc-for list="{{ tabs }}" as="tab" hint-placeholder-count="8">
+          <button onClick="{{ tab.onClick }}" style="{{ tab.style }}"><span style="font-family:'Noto Serif SC',serif; font-weight:700; margin-right:7px; letter-spacing:0;">{{ tab.zh }}</span>{{ tab.name }}</button>
+        </sc-for>
+      </div>
+
+      <!-- Active category heading -->
+      <div style="text-align:center; margin-bottom:34px;">
+        <h3 style="font-family:'Noto Serif SC',serif; font-weight:700; font-size:clamp(30px,3.4vw,44px); margin:0; color:#C9A24B; line-height:1;">{{ active.zh }}</h3>
+        <div style="margin-top:8px; font-family:'Playfair Display',serif; font-style:italic; font-size:clamp(18px,2vw,24px); color:#FAF6EE;">{{ active.name }}</div>
+        <sc-if value="{{ active.priceHeader }}" hint-placeholder-val="">
+          <div style="margin-top:8px; font-family:'Playfair Display',serif; font-style:italic; font-size:22px; color:#C9A24B;">{{ active.priceHeader }}</div>
+        </sc-if>
+        <sc-if value="{{ active.note }}" hint-placeholder-val="">
+          <p style="max-width:620px; margin:12px auto 0; font-size:14px; line-height:1.6; color:rgba(250,246,238,0.6); font-weight:300;">{{ active.note }}</p>
+        </sc-if>
+        <div style="width:46px; height:2px; background:#8B1A1A; margin:22px auto 0;"></div>
+      </div>
+
+      <!-- LIST layout -->
+      <sc-if value="{{ active.isList }}" hint-placeholder-val="{{ true }}">
+        <div data-menu-grid style="display:grid; grid-template-columns:repeat(auto-fill, minmax(380px, 1fr)); gap:8px 56px;">
+          <sc-for list="{{ active.items }}" as="item" hint-placeholder-count="10">
+            <div style="display:flex; align-items:baseline; gap:12px; padding:13px 4px; border-bottom:1px solid rgba(250,246,238,0.08);">
+              <span style="font-size:16px; color:#FAF6EE; font-weight:400;">
+                <sc-if value="{{ item.spicy }}" hint-placeholder-val=""><span style="color:#E07A52; margin-right:6px;">🌶</span></sc-if>{{ item.name }}
+              </span>
+              <span style="flex:1; border-bottom:1px dotted rgba(201,162,75,0.32); transform:translateY(-4px); min-width:14px;"></span>
+              <span style="font-family:'Work Sans',sans-serif; font-weight:600; font-size:16.5px; font-variant-numeric:lining-nums tabular-nums; letter-spacing:.01em; color:#E7C77B; white-space:nowrap;">{{ item.price }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+
+      <!-- COMBO layout -->
+      <sc-if value="{{ active.isCombo }}" hint-placeholder-val="">
+        <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center; max-width:880px; margin:0 auto;">
+          <sc-for list="{{ active.chips }}" as="chip" hint-placeholder-count="12">
+            <span style="padding:11px 18px; border-radius:999px; border:1px solid rgba(201,162,75,0.28); background:rgba(201,162,75,0.06); font-size:14.5px; color:#FAF6EE;">
+              <sc-if value="{{ chip.spicy }}" hint-placeholder-val=""><span style="color:#E07A52; margin-right:5px;">🌶</span></sc-if>{{ chip.name }}
+            </span>
+          </sc-for>
+        </div>
+      </sc-if>
+
+      <!-- FAMILY layout -->
+      <sc-if value="{{ active.isFamily }}" hint-placeholder-val="">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:22px;">
+          <sc-for list="{{ active.plans }}" as="plan" hint-placeholder-count="3">
+            <div style="background:rgba(250,246,238,0.04); border:1px solid rgba(201,162,75,0.2); border-radius:16px; padding:28px;">
+              <div style="display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:16px;">
+                <span style="font-family:'Playfair Display',serif; font-weight:700; font-size:24px; color:#FAF6EE;">Dinner {{ plan.name }}</span>
+                <span style="font-family:'Playfair Display',serif; font-style:italic; font-size:20px; color:#C9A24B; white-space:nowrap;">{{ plan.price }}</span>
+              </div>
+              <p style="font-size:14.5px; line-height:1.7; color:rgba(250,246,238,0.78); margin:0 0 14px; font-weight:300;">{{ plan.items }}</p>
+              <p style="font-size:13px; line-height:1.6; color:rgba(250,246,238,0.5); margin:0; font-style:italic; font-weight:300;">{{ plan.extras }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+
+      <div style="text-align:center; margin-top:56px;">
+        <a href="https://www.doordash.com/store/chan-pheng%E2%80%99s-mandarin-cuisine-chico-34992320/?utm_campaign=gpa&amp;pickup=true" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:10px; padding:16px 34px; border-radius:999px; background:#C9A24B; color:#1A1410; font-weight:600; font-size:16px; text-decoration:none; box-shadow:0 12px 30px rgba(201,162,75,0.26); transition:transform .25s ease;" style-hover="transform:translateY(-3px);">Order the full menu on DoorDash &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VISIT / HOURS / LOCATION ===== -->
+  <section id="visit" data-reveal style="position:relative; max-width:1120px; margin:0 auto; padding:104px 40px;">
+    <sc-if value="{{ showWatermarks }}" hint-placeholder-val="{{ true }}"><div aria-hidden="true" style="position:absolute; top:50px; left:-40px; font-family:'Noto Serif SC',serif; font-weight:900; font-size:320px; line-height:1; color:rgba(139,26,26,0.05); pointer-events:none; user-select:none; z-index:0;">福</div></sc-if>
+    <div data-visit-grid style="position:relative; z-index:1; display:grid; grid-template-columns:0.95fr 1.05fr; gap:56px; align-items:stretch;">
+      <div>
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px;">
+          <span style="width:30px; height:1px; background:#C9A24B; display:inline-block;"></span>
+          <span style="font-family:'Noto Serif SC',serif; font-weight:700; font-size:13px; color:#8B1A1A; letter-spacing:0.12em;">莅临</span>
+          <span style="font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:#8B1A1A; font-weight:600;">Visit Us</span>
+        </div>
+        <div style="font-family:'Noto Serif SC',serif; font-weight:700; font-size:clamp(21px,2.3vw,29px); color:#8B1A1A; margin:0 0 12px; letter-spacing:0.04em;">欢迎光临</div>
+        <h2 style="font-family:'Playfair Display',serif; font-weight:700; font-size:clamp(30px,3.4vw,44px); line-height:1.12; margin:0 0 28px;">Find us in Chico</h2>
+
+        <div style="display:flex; gap:16px; padding:20px 0; border-top:1px solid rgba(139,26,26,0.14);">
+          <span style="font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:#8B1A1A; font-weight:600; min-width:90px;">Address</span>
+          <span style="font-size:16.5px; color:#1A1410; line-height:1.5;">1140 Mangrove Ave, Suite E<br>Chico, CA 95926</span>
+        </div>
+        <div style="display:flex; gap:16px; padding:20px 0; border-top:1px solid rgba(139,26,26,0.14);">
+          <span style="font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:#8B1A1A; font-weight:600; min-width:90px;">Phone</span>
+          <a href="tel:+15308946888" style="font-size:16.5px; color:#1A1410; text-decoration:none;" style-hover="color:#8B1A1A;">(530) 894-6888</a>
+        </div>
+        <div style="display:flex; gap:16px; padding:20px 0; border-top:1px solid rgba(139,26,26,0.14); border-bottom:1px solid rgba(139,26,26,0.14);">
+          <span style="font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:#8B1A1A; font-weight:600; min-width:90px;">Hours</span>
+          <span style="font-size:16.5px; color:#1A1410; line-height:1.55;">Tuesday &ndash; Sunday<br>11:00 AM &ndash; 8:30 PM<br><span style="color:#8B1A1A; font-weight:500;">Monday &mdash; Closed</span></span>
+        </div>
+
+        <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:28px;">
+          <span style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:999px; background:#8B1A1A; color:#FAF6EE; font-size:13.5px; font-weight:500;">Delivery by DoorDash</span>
+          <span style="display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:999px; background:rgba(201,162,75,0.18); color:#7a5e1c; border:1px solid rgba(201,162,75,0.4); font-size:13.5px; font-weight:600;">Party Trays Available</span>
+        </div>
+      </div>
+
+      <div style="position:relative; border-radius:20px; overflow:hidden; min-height:420px; box-shadow:0 20px 50px rgba(26,20,16,0.16); border:1px solid rgba(139,26,26,0.1);">
+        <iframe title="Map to Chanpheng's Mandarin Cuisine" src="https://maps.google.com/maps?q=1140%20Mangrove%20Ave%20Suite%20E%20Chico%20CA%2095926&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="position:absolute; inset:0; width:100%; height:100%; border:0; filter:grayscale(0.18) contrast(1.02);" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer data-footer style="position:relative; overflow:hidden; background:#1A1410; color:#FAF6EE; padding:64px 40px 40px;">
+    <sc-if value="{{ showWatermarks }}" hint-placeholder-val="{{ true }}"><div aria-hidden="true" style="position:absolute; bottom:-70px; right:48px; font-family:'Noto Serif SC',serif; font-weight:900; font-size:360px; line-height:1; color:rgba(201,162,75,0.04); pointer-events:none; user-select:none; z-index:0;">福</div></sc-if>
+    <div data-footer-grid style="position:relative; z-index:1; max-width:1120px; margin:0 auto; display:grid; grid-template-columns:1.4fr 1fr 1fr auto; gap:40px; align-items:start;">
+      <div data-footer-brand>
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+          <span style="display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:50%; background:#8B1A1A; border:1.5px solid #C9A24B; box-shadow:inset 0 0 0 3px rgba(201,162,75,0.18); flex:none;">
+            <span style="font-family:'Noto Serif SC',serif; font-weight:700; font-size:22px; color:#E7C77B; line-height:1;">福</span>
+          </span>
+          <div>
+            <div style="font-family:'Playfair Display',serif; font-weight:800; font-size:23px; line-height:1.12; color:#FAF6EE;">Chanpheng's <span style="color:#C9A24B; font-weight:600;">Mandarin Cuisine</span></div>
+            <div style="font-family:'Noto Serif SC',serif; font-weight:500; font-size:15px; letter-spacing:0.3em; color:#C9A24B; margin-top:6px;">陈鹏满堂</div>
+          </div>
+        </div>
+        <p style="color:rgba(250,246,238,0.6); font-size:14.5px; line-height:1.7; max-width:300px; margin:0; font-weight:300;">Fresh, made-to-order Mandarin &amp; Szechuan cooking. Family-owned in Chico, California.</p>
+      </div>
+      <div>
+        <div style="font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:#C9A24B; margin-bottom:14px;">Find Us</div>
+        <p style="color:rgba(250,246,238,0.72); font-size:14.5px; line-height:1.7; margin:0; font-weight:300;">1140 Mangrove Ave, Suite E<br>Chico, CA 95926<br><a href="tel:+15308946888" style="color:rgba(250,246,238,0.72); text-decoration:none;" style-hover="color:#C9A24B;">(530) 894-6888</a></p>
+      </div>
+      <div>
+        <div style="font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:#C9A24B; margin-bottom:14px;">Hours</div>
+        <p style="color:rgba(250,246,238,0.72); font-size:14.5px; line-height:1.7; margin:0; font-weight:300;">Tue &ndash; Sun<br>11:00 AM &ndash; 8:30 PM<br>Monday Closed</p>
+      </div>
+      <div data-footer-cta style="display:flex; flex-direction:column; gap:14px;">
+        <a href="https://www.doordash.com/store/chan-pheng%E2%80%99s-mandarin-cuisine-chico-34992320/?utm_campaign=gpa&amp;pickup=true" target="_blank" rel="noopener" style="white-space:nowrap; text-align:center; padding:13px 24px; border-radius:999px; background:#C9A24B; color:#1A1410; font-weight:600; font-size:14px; text-decoration:none;" style-hover="background:#d8b15e;">Order on DoorDash</a>
+        <div style="display:flex; gap:10px;">
+          <span style="width:38px; height:38px; border-radius:50%; border:1px solid rgba(250,246,238,0.22); display:flex; align-items:center; justify-content:center; font-size:13px; color:rgba(250,246,238,0.6); cursor:pointer;" style-hover="border-color:#C9A24B; color:#C9A24B;">IG</span>
+          <span style="width:38px; height:38px; border-radius:50%; border:1px solid rgba(250,246,238,0.22); display:flex; align-items:center; justify-content:center; font-size:13px; color:rgba(250,246,238,0.6); cursor:pointer;" style-hover="border-color:#C9A24B; color:#C9A24B;">FB</span>
+        </div>
+      </div>
+    </div>
+    <div style="position:relative; z-index:1; max-width:1120px; margin:48px auto 0; padding-top:24px; border-top:1px solid rgba(250,246,238,0.1); display:flex; flex-wrap:wrap; gap:8px; justify-content:space-between; font-size:12.5px; color:rgba(250,246,238,0.4);">
+      <span>&copy; 2026 Chanpheng's Mandarin Cuisine. All rights reserved.</span>
       <span>Chico, California</span>
     </div>
-    <h1 class="hero__title">Traditional flavors,<br><em>crafted fresh.</em></h1>
-    <p class="hero__lede">Wok-fired to order with time-honored Mandarin recipes. Dine in, take out, or have it delivered.</p>
-    <div class="hero__ctas">
-      <a class="btn-primary" href="https://www.doordash.com/store/chan-pheng%E2%80%99s-mandarin-cuisine-chico-34992320/?utm_campaign=gpa&amp;pickup=true" target="_blank" rel="noopener">Order Now</a>
-      <a class="btn-ghost" href="tel:+15308946888">Call (530) 894-6888</a>
-    </div>
-    <ul class="hero__meta">
-      <li>Delivery by DoorDash</li>
-      <li>Party Trays Available</li>
-      <li>Take Out · Dine In</li>
-    </ul>
-  </div>
+  </footer>
 
-  <!-- Marquee: 10 dishes repeated 3× for seamless CSS-only loop -->
-  <div class="marquee" aria-hidden="false" aria-label="Featured dishes">
-    <div class="marquee__track">
-      <!-- repeat 1 -->
-      <figure class="dish-tile"><img src="/assets/img/dishes/noodle.avif" alt="Drunken Noodle" width="320" height="479" loading="eager" fetchpriority="high"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Drunken Noodle</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/general-tao.avif" alt="General Tao's Chicken" width="640" height="480" loading="eager" fetchpriority="high"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">General Tao's Chicken</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/potsticker.avif" alt="Pan-Fried Potstickers" width="647" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Pan-Fried Potstickers</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/pho.avif" alt="Beef Pho" width="625" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Beef Pho</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/beef-noodle.webp" alt="Beef Noodle Soup" width="720" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Beef Noodle Soup</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/orange-chicken.webp" alt="Orange Chicken" width="720" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Orange Chicken</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/salt-pepper-shrimp.webp" alt="Salt &amp; Pepper Shrimp" width="720" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Salt &amp; Pepper Shrimp</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/eggplant.webp" alt="Crispy Sweet &amp; Sour Eggplant" width="691" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Crispy Sweet &amp; Sour Eggplant</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/basil-rice.webp" alt="Basil Fried Rice" width="779" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Basil Fried Rice</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/singapore.webp" alt="Singapore Style Rice Noodle" width="726" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Singapore Style Rice Noodle</figcaption></figure>
-      <!-- repeat 2 (for seamless loop) -->
-      <figure class="dish-tile"><img src="/assets/img/dishes/noodle.avif" alt="" width="320" height="479" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Drunken Noodle</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/general-tao.avif" alt="" width="640" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">General Tao's Chicken</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/potsticker.avif" alt="" width="647" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Pan-Fried Potstickers</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/pho.avif" alt="" width="625" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Beef Pho</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/beef-noodle.webp" alt="" width="720" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Beef Noodle Soup</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/orange-chicken.webp" alt="" width="720" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Orange Chicken</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/salt-pepper-shrimp.webp" alt="" width="720" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Salt &amp; Pepper Shrimp</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/eggplant.webp" alt="" width="691" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Crispy Sweet &amp; Sour Eggplant</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/basil-rice.webp" alt="" width="779" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Basil Fried Rice</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/singapore.webp" alt="" width="726" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Singapore Style Rice Noodle</figcaption></figure>
-      <!-- repeat 3 -->
-      <figure class="dish-tile"><img src="/assets/img/dishes/noodle.avif" alt="" width="320" height="479" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Drunken Noodle</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/general-tao.avif" alt="" width="640" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">General Tao's Chicken</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/potsticker.avif" alt="" width="647" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Pan-Fried Potstickers</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/pho.avif" alt="" width="625" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Beef Pho</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/beef-noodle.webp" alt="" width="720" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Beef Noodle Soup</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/orange-chicken.webp" alt="" width="720" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Orange Chicken</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/salt-pepper-shrimp.webp" alt="" width="720" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Salt &amp; Pepper Shrimp</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/eggplant.webp" alt="" width="691" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Crispy Sweet &amp; Sour Eggplant</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/basil-rice.webp" alt="" width="779" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Basil Fried Rice</figcaption></figure>
-      <figure class="dish-tile"><img src="/assets/img/dishes/singapore.webp" alt="" width="726" height="480" loading="lazy"><div class="dish-tile__vignette"></div><div class="dish-tile__gleam"></div><figcaption class="dish-tile__caption">Singapore Style Rice Noodle</figcaption></figure>
-    </div>
-    <div class="marquee-controls" aria-label="Marquee controls">
-      <button type="button" class="marquee-arrow" data-marquee-prev aria-label="Previous dish">‹</button>
-      <button type="button" class="marquee-arrow" data-marquee-next aria-label="Next dish">›</button>
-      <div class="marquee-hint">Hover to pause · arrows to browse</div>
-    </div>
-  </div>
-</header>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:860},&quot;showFavorites&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;showWatermarks&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;revealAnimations&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { active: 0, hovered: null, ready: false, marqueeStopped: false };
 
-<!-- ===== ABOUT ===== -->
-<section class="about" id="about" data-reveal>
-  <div class="about__copy">
-    <div class="about__eyebrow">
-      <span class="zh">炉火纯青 · 用心烹调</span>
-    </div>
-    <h2 class="about__title">A family table, served the <em>way it should be.</em></h2>
-    <div class="about__body">
-      <p>At Chanpheng's Mandarin Cuisine, every dish is wok-fired to order using fresh ingredients and time-honored recipes. From sizzling Szechuan classics to house favorites like Honey Walnut Shrimp and General Tao's Chicken, we bring authentic Mandarin flavors to Chico.</p>
-      <p>Family-owned and made with care — <strong>dine in, take out, or have it delivered.</strong> <em>We're glad you're here.</em></p>
-    </div>
-  </div>
-  <div class="about__wm" aria-hidden="true">福</div>
-  <div class="fav-grid" aria-label="Featured dishes from our kitchen">
-    <img src="/assets/img/dishes/general-tao.avif" alt="General Tao's Chicken" width="640" height="480" loading="lazy">
-    <img src="/assets/img/dishes/potsticker.avif" alt="Pan-Fried Potstickers" width="647" height="480" loading="lazy">
-    <img src="/assets/img/dishes/pho.avif" alt="Beef Pho" width="625" height="480" loading="lazy">
-  </div>
-</section>
+  rootRef = (el) => { this.rootEl = el; };
 
-<!-- ===== MENU ===== -->
-<section class="menu" id="menu" data-reveal>
-  <div class="menu__watermarks" aria-hidden="true">
-    <div class="menu__wm menu__wm--center">福</div>
-    <div class="menu__wm menu__wm--bl">福</div>
-    <div class="menu__wm menu__wm--br">福</div>
-  </div>
-  <div class="menu__inner">
-    <div class="menu__header">
-      <div class="menu__zh">菜&ensp;单</div>
-      <div class="menu__en">Our Menu</div>
-      <p class="menu__legend"><span class="spicy-glyph">🌶</span> denotes a spicy dish · ask us to adjust the spice level</p>
-    </div>
+  // ---- marquee (rAF-driven so it supports click-to-stop + manual stepping) ----
+  mqOffset = 0;
+  mqTarget = null;
+  mqLast = null;
+  mqSetW = 0;
+  mqBounds = [];
 
-    <div class="menu__tabs" role="tablist" aria-label="Menu categories">
-      <button type="button" class="tab is-active" role="tab" aria-selected="true"  aria-controls="cat-appetizers"  id="tab-appetizers"><span class="zh">前菜</span>Appetizers</button>
-      <button type="button" class="tab"           role="tab" aria-selected="false" aria-controls="cat-soup"        id="tab-soup"><span class="zh">汤</span>Soup</button>
-      <button type="button" class="tab"           role="tab" aria-selected="false" aria-controls="cat-rice"        id="tab-rice"><span class="zh">饭面</span>Fried Rice &amp; Chow Mein</button>
-      <button type="button" class="tab"           role="tab" aria-selected="false" aria-controls="cat-foo-young"   id="tab-foo-young"><span class="zh">芙蓉蛋</span>Egg Foo Young</button>
-      <button type="button" class="tab"           role="tab" aria-selected="false" aria-controls="cat-vegetable"   id="tab-vegetable"><span class="zh">素菜</span>Vegetable</button>
-      <button type="button" class="tab"           role="tab" aria-selected="false" aria-controls="cat-pork"        id="tab-pork"><span class="zh">猪肉</span>Pork</button>
-      <button type="button" class="tab"           role="tab" aria-selected="false" aria-controls="cat-poultry"     id="tab-poultry"><span class="zh">鸡鸭</span>Poultry</button>
-      <button type="button" class="tab"           role="tab" aria-selected="false" aria-controls="cat-beef"        id="tab-beef"><span class="zh">牛肉</span>Beef</button>
-      <button type="button" class="tab"           role="tab" aria-selected="false" aria-controls="cat-shrimp"      id="tab-shrimp"><span class="zh">虾</span>Shrimp</button>
-      <button type="button" class="tab"           role="tab" aria-selected="false" aria-controls="cat-chef"        id="tab-chef"><span class="zh">招牌菜</span>Chef's Special</button>
-      <button type="button" class="tab"           role="tab" aria-selected="false" aria-controls="cat-noodles"     id="tab-noodles"><span class="zh">面食</span>Noodles</button>
-      <button type="button" class="tab"           role="tab" aria-selected="false" aria-controls="cat-teriyaki"    id="tab-teriyaki"><span class="zh">照烧</span>Teriyaki Plate</button>
-      <button type="button" class="tab"           role="tab" aria-selected="false" aria-controls="cat-combo"       id="tab-combo"><span class="zh">套餐</span>Combo Special</button>
-      <button type="button" class="tab"           role="tab" aria-selected="false" aria-controls="cat-family"      id="tab-family"><span class="zh">合家欢</span>Family Dinner</button>
-    </div>
+  trackRef = (el) => { this.trackEl = el; };
 
-    <div class="menu__panels">
-      <!-- Appetizers -->
-      <div class="menu-panel is-active" id="cat-appetizers" role="tabpanel" aria-labelledby="tab-appetizers">
-        <div class="menu-panel__heading">
-          <h3 class="menu-panel__zh">前菜</h3>
-          <div class="menu-panel__en">Appetizers</div>
-          <div class="menu-panel__divider"></div>
-        </div>
-        <ul class="menu-list">
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Fried Golden Tofu, Spicy Sauce</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">9.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Fried Pork Wonton (6)</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">6.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Spring Egg Roll (4)</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">8.50</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Spicy Garlic Edamame</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">9.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Fried Prawns (4)</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">9.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Salt &amp; Pepper Chicken Wing (6)</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">10.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Fried Garlic Chicken Wing (6)</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">10.95</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Steamed Wonton, Spicy Chili Sauce</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">10.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">B.B.Q Boneless Pork</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">11.00</span></li>
-          <li class="menu-item"><span class="menu-item__name">Savory Sauce Pancake</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">6.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Pan Fried Potsticker (6)</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">10.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Crab Rangoon Puff (6)</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">11.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Homemade Pork Bun (2)</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">4.50</span></li>
-          <li class="menu-item"><span class="menu-item__name">Beef or Squid Skewer (6)</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">10.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">French Fries</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">4.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Sesame Ball</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">4.95</span></li>
-        </ul>
-      </div>
+  measureMarquee() {
+    const el = this.trackEl;
+    const n = this.dishCount || 5;
+    if (!el || el.children.length < n) return;
+    const gap = 16;
+    let sum = 0; const bounds = [];
+    for (let i = 0; i < n; i++) { bounds.push(sum); sum += el.children[i].offsetWidth + gap; }
+    this.mqSetW = sum; this.mqBounds = bounds;
+  }
 
-      <!-- Soup -->
-      <div class="menu-panel" id="cat-soup" role="tabpanel" aria-labelledby="tab-soup" hidden>
-        <div class="menu-panel__heading">
-          <h3 class="menu-panel__zh">汤</h3>
-          <div class="menu-panel__en">Soup</div>
-          <div class="menu-panel__divider"></div>
-        </div>
-        <ul class="menu-list">
-          <li class="menu-item"><span class="menu-item__name">Wonton Soup (with Vegetable)</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">10.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Wor Wonton Soup</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">11.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Hot &amp; Sour Soup</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">10.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Egg Flower Soup</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">9.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Seafood Soup</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">12.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Chicken Noodle Soup with Vegetable</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">11.95</span></li>
-        </ul>
-      </div>
+  mqStep(dir) {
+    if (!this.mqSetW) this.measureMarquee();
+    if (!this.mqSetW) return;
+    const base = this.mqTarget != null ? this.mqTarget : this.mqOffset;
+    const pos = ((base % this.mqSetW) + this.mqSetW) % this.mqSetW;
+    const b = this.mqBounds;
+    if (dir > 0) {
+      let nb = null;
+      for (let i = 0; i < b.length; i++) { if (b[i] > pos + 1) { nb = b[i]; break; } }
+      if (nb == null) nb = this.mqSetW;
+      this.mqTarget = base + (nb - pos);
+    } else {
+      let pb = null;
+      for (let i = b.length - 1; i >= 0; i--) { if (b[i] < pos - 1) { pb = b[i]; break; } }
+      if (pb == null) pb = b[b.length - 1] - this.mqSetW;
+      this.mqTarget = base - (pos - pb);
+    }
+  }
 
-      <!-- Fried Rice & Chow Mein -->
-      <div class="menu-panel" id="cat-rice" role="tabpanel" aria-labelledby="tab-rice" hidden>
-        <div class="menu-panel__heading">
-          <h3 class="menu-panel__zh">饭面</h3>
-          <div class="menu-panel__en">Fried Rice &amp; Chow Mein</div>
-          <p class="menu-panel__note">Fried rice, chow mein, or rice noodle — your choice of preparation.</p>
-          <div class="menu-panel__divider"></div>
-        </div>
-        <ul class="menu-list">
-          <li class="menu-item"><span class="menu-item__name">Vegetable</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">12.55</span></li>
-          <li class="menu-item"><span class="menu-item__name">Chicken or Pork</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">13.25</span></li>
-          <li class="menu-item"><span class="menu-item__name">Beef or Shrimp</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">13.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">House Special</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.95</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Basil Fried Rice, choice of meat</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.95</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Singapore Style Rice Noodle</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.95</span></li>
-        </ul>
-      </div>
+  mqNext = () => { this.mqStep(1); };
+  mqPrev = () => { this.mqStep(-1); };
 
-      <!-- Egg Foo Young -->
-      <div class="menu-panel" id="cat-foo-young" role="tabpanel" aria-labelledby="tab-foo-young" hidden>
-        <div class="menu-panel__heading">
-          <h3 class="menu-panel__zh">芙蓉蛋</h3>
-          <div class="menu-panel__en">Egg Foo Young</div>
-          <div class="menu-panel__divider"></div>
-        </div>
-        <ul class="menu-list">
-          <li class="menu-item"><span class="menu-item__name">Vegetable Egg Foo Young</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">13.50</span></li>
-          <li class="menu-item"><span class="menu-item__name">Pork or Chicken Egg Foo Young</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">13.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Shrimp Egg Foo Young</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">House Special Egg Foo Young</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.95</span></li>
-        </ul>
-      </div>
+  mqLoop = (t) => {
+    if (this.mqLast == null) this.mqLast = t;
+    let dt = t - this.mqLast; this.mqLast = t;
+    if (dt > 100) dt = 16;
+    if (!this.mqSetW) this.measureMarquee();
+    const el = this.trackEl;
+    if (el && this.mqSetW) {
+      if (this.mqTarget != null) {
+        const diff = this.mqTarget - this.mqOffset;
+        this.mqOffset += diff * Math.min(1, dt / 160);
+        if (Math.abs(this.mqTarget - this.mqOffset) < 0.5) { this.mqOffset = this.mqTarget; this.mqTarget = null; }
+      } else if (this.state.hovered == null && !this.state.marqueeStopped) {
+        this.mqOffset += (this.mqSetW / 46000) * dt;
+      }
+      while (this.mqOffset >= this.mqSetW) { this.mqOffset -= this.mqSetW; if (this.mqTarget != null) this.mqTarget -= this.mqSetW; }
+      while (this.mqOffset < 0) { this.mqOffset += this.mqSetW; if (this.mqTarget != null) this.mqTarget += this.mqSetW; }
+      el.style.transform = 'translateX(' + (-this.mqOffset) + 'px)';
+    }
+    this._raf = requestAnimationFrame(this.mqLoop);
+  };
 
-      <!-- Vegetable -->
-      <div class="menu-panel" id="cat-vegetable" role="tabpanel" aria-labelledby="tab-vegetable" hidden>
-        <div class="menu-panel__heading">
-          <h3 class="menu-panel__zh">素菜</h3>
-          <div class="menu-panel__en">Vegetable</div>
-          <div class="menu-panel__divider"></div>
-        </div>
-        <ul class="menu-list">
-          <li class="menu-item"><span class="menu-item__name">Vegetable Deluxe</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">13.50</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Broccoli with Cashew, Spicy Garlic Sauce</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">13.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Sauteed Mushroom, Snow Peas &amp; Broccoli</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">13.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Bean Curd with Vegetable</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">13.50</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Ma Po Tofu</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">13.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Salt &amp; Pepper Tofu</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">13.50</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Eggplant with Spicy Garlic Sauce</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">13.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Mushu Vegetable</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">13.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">General Tao's Tofu</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">13.50</span></li>
-        </ul>
-      </div>
+  componentDidMount() {
+    this.setState({ ready: true });
+    this._onResize = () => { this.mqSetW = 0; };
+    window.addEventListener('resize', this._onResize);
+    this._raf = requestAnimationFrame(this.mqLoop);
+    const run = () => {
+      if (this.props.revealAnimations === false) return;
+      const root = this.rootEl || document;
+      const els = root.querySelectorAll('[data-reveal]');
+      els.forEach((el) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(34px)';
+        el.style.transition = 'opacity .9s cubic-bezier(.22,.61,.36,1), transform .9s cubic-bezier(.22,.61,.36,1)';
+      });
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.style.opacity = '1';
+            e.target.style.transform = 'none';
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      els.forEach((el) => io.observe(el));
+    };
+    // wait a tick so refs/DOM are settled
+    setTimeout(run, 60);
+  }
 
-      <!-- Pork -->
-      <div class="menu-panel" id="cat-pork" role="tabpanel" aria-labelledby="tab-pork" hidden>
-        <div class="menu-panel__heading">
-          <h3 class="menu-panel__zh">猪肉</h3>
-          <div class="menu-panel__en">Pork</div>
-          <div class="menu-panel__divider"></div>
-        </div>
-        <ul class="menu-list">
-          <li class="menu-item"><span class="menu-item__name">Sweet &amp; Sour Pork</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">13.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Pork with Broccoli or Vegetable</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.55</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Szechuan Pork</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.55</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Pork with Garlic Sauce</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.55</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Mongolian Pork</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.55</span></li>
-          <li class="menu-item"><span class="menu-item__name">Pineapple Pork</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.55</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Hunan Pork</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.55</span></li>
-          <li class="menu-item"><span class="menu-item__name">Mushu Pork</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.55</span></li>
-        </ul>
-      </div>
+  componentWillUnmount() {
+    if (this._raf) cancelAnimationFrame(this._raf);
+    if (this._onResize) window.removeEventListener('resize', this._onResize);
+  }
 
-      <!-- Poultry -->
-      <div class="menu-panel" id="cat-poultry" role="tabpanel" aria-labelledby="tab-poultry" hidden>
-        <div class="menu-panel__heading">
-          <h3 class="menu-panel__zh">鸡鸭</h3>
-          <div class="menu-panel__en">Poultry</div>
-          <div class="menu-panel__divider"></div>
-        </div>
-        <ul class="menu-list">
-          <li class="menu-item"><span class="menu-item__name">Sweet &amp; Sour Chicken</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">13.99</span></li>
-          <li class="menu-item"><span class="menu-item__name">Almond or Cashew Chicken</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.55</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Kungpao Chicken</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.55</span></li>
-          <li class="menu-item"><span class="menu-item__name">Sliced Chicken with Mushroom</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.55</span></li>
-          <li class="menu-item"><span class="menu-item__name">Lemon Chicken</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Coconut Chicken</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.95</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Jalapeno Chicken</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.55</span></li>
-          <li class="menu-item"><span class="menu-item__name">House Special Dry Braised Chicken</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.55</span></li>
-          <li class="menu-item"><span class="menu-item__name">Black Pepper Chicken</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.55</span></li>
-          <li class="menu-item"><span class="menu-item__name">Curry Chicken with Onion</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.55</span></li>
-          <li class="menu-item"><span class="menu-item__name">Orange Chicken or Sesame Chicken</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">15.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">General Tao's Chicken</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">15.95</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Chicken with Garlic Sauce</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.75</span></li>
-          <li class="menu-item"><span class="menu-item__name">Mandarin Chicken</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.75</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Spicy Basil Chicken</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Mushu Chicken</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.50</span></li>
-        </ul>
-      </div>
+  get categories() {
+    const L = (name, type) => ({ name, type });
+    return [
+      { name: 'Appetizers', type: 'list', items: [
+        { name: 'Fried Golden Tofu, Spicy Sauce', price: '9.95', spicy: true },
+        { name: 'Fried Pork Wonton (6)', price: '6.95' },
+        { name: 'Spring Egg Roll (4)', price: '8.50' },
+        { name: 'Spicy Garlic Edamame', price: '9.95', spicy: true },
+        { name: 'Fried Prawns (4)', price: '9.95' },
+        { name: 'Salt & Pepper Chicken Wing (6)', price: '10.95' },
+        { name: 'Fried Garlic Chicken Wing (6)', price: '10.95' },
+        { name: 'Steamed Wonton, Spicy Chili Sauce', price: '10.95', spicy: true },
+        { name: 'B.B.Q Boneless Pork', price: '11.00' },
+        { name: 'Savory Sauce Pancake', price: '6.95' },
+        { name: 'Pan Fried Potsticker (6)', price: '10.95' },
+        { name: 'Crab Rangoon Puff (6)', price: '11.95' },
+        { name: 'Homemade Pork Bun (2)', price: '4.50' },
+        { name: 'Beef or Squid Skewer (6)', price: '10.95' },
+        { name: 'French Fries', price: '4.95' },
+        { name: 'Sesame Ball', price: '4.95' },
+      ]},
+      { name: 'Soup', type: 'list', items: [
+        { name: 'Wonton Soup (with Vegetable)', price: '10.95' },
+        { name: 'Wor Wonton Soup', price: '11.95' },
+        { name: 'Hot & Sour Soup', price: '10.95' },
+        { name: 'Egg Flower Soup', price: '9.95' },
+        { name: 'Seafood Soup', price: '12.95' },
+        { name: 'Chicken Noodle Soup with Vegetable', price: '11.95' },
+      ]},
+      { name: 'Fried Rice & Chow Mein', type: 'list', note: 'Fried rice, chow mein, or rice noodle — your choice of preparation.', items: [
+        { name: 'Vegetable', price: '12.55' },
+        { name: 'Chicken or Pork', price: '13.25' },
+        { name: 'Beef or Shrimp', price: '13.95' },
+        { name: 'House Special', price: '14.95' },
+        { name: 'Basil Fried Rice, choice of meat', price: '14.95', spicy: true },
+        { name: 'Singapore Style Rice Noodle', price: '14.95', spicy: true },
+      ]},
+      { name: 'Egg Foo Young', type: 'list', items: [
+        { name: 'Vegetable Egg Foo Young', price: '13.50' },
+        { name: 'Pork or Chicken Egg Foo Young', price: '13.95' },
+        { name: 'Shrimp Egg Foo Young', price: '14.95' },
+        { name: 'House Special Egg Foo Young', price: '14.95' },
+      ]},
+      { name: 'Vegetable', type: 'list', items: [
+        { name: 'Vegetable Deluxe', price: '13.50' },
+        { name: 'Broccoli with Cashew, Spicy Garlic Sauce', price: '13.95', spicy: true },
+        { name: 'Sauteed Mushroom, Snow Peas & Broccoli', price: '13.95' },
+        { name: 'Bean Curd with Vegetable', price: '13.50' },
+        { name: 'Ma Po Tofu', price: '13.95', spicy: true },
+        { name: 'Salt & Pepper Tofu', price: '13.50' },
+        { name: 'Eggplant with Spicy Garlic Sauce', price: '13.95', spicy: true },
+        { name: 'Mushu Vegetable', price: '13.95' },
+        { name: "General Tao's Tofu", price: '13.50' },
+      ]},
+      { name: 'Pork', type: 'list', items: [
+        { name: 'Sweet & Sour Pork', price: '13.95' },
+        { name: 'Pork with Broccoli or Vegetable', price: '14.55' },
+        { name: 'Szechuan Pork', price: '14.55', spicy: true },
+        { name: 'Pork with Garlic Sauce', price: '14.55', spicy: true },
+        { name: 'Mongolian Pork', price: '14.55', spicy: true },
+        { name: 'Pineapple Pork', price: '14.55' },
+        { name: 'Hunan Pork', price: '14.55', spicy: true },
+        { name: 'Mushu Pork', price: '14.55' },
+      ]},
+      { name: 'Poultry', type: 'list', items: [
+        { name: 'Sweet & Sour Chicken', price: '13.99' },
+        { name: 'Almond or Cashew Chicken', price: '14.55' },
+        { name: 'Kungpao Chicken', price: '14.55', spicy: true },
+        { name: 'Sliced Chicken with Mushroom', price: '14.55' },
+        { name: 'Lemon Chicken', price: '14.95' },
+        { name: 'Coconut Chicken', price: '14.95' },
+        { name: 'Jalapeno Chicken', price: '14.55', spicy: true },
+        { name: 'House Special Dry Braised Chicken', price: '14.55' },
+        { name: 'Black Pepper Chicken', price: '14.55' },
+        { name: 'Curry Chicken with Onion', price: '14.55' },
+        { name: 'Orange Chicken or Sesame Chicken', price: '15.95' },
+        { name: "General Tao's Chicken", price: '15.95' },
+        { name: 'Chicken with Garlic Sauce', price: '14.75', spicy: true },
+        { name: 'Mandarin Chicken', price: '14.75' },
+        { name: 'Spicy Basil Chicken', price: '14.95', spicy: true },
+        { name: 'Mushu Chicken', price: '14.50' },
+      ]},
+      { name: 'Beef', type: 'list', items: [
+        { name: 'Mongolian Beef', price: '15.45' },
+        { name: 'Beef with Broccoli or Snow Peas', price: '15.45' },
+        { name: 'Beef with Oyster Sauce', price: '15.45' },
+        { name: 'Beef with Spicy Garlic Sauce', price: '15.45', spicy: true },
+        { name: 'Pepper Steak with Onion', price: '15.45' },
+        { name: 'House Special Cubed Steak', price: '16.95' },
+        { name: 'Peking Beef', price: '16.95' },
+        { name: 'Szechuan Beef', price: '15.45', spicy: true },
+        { name: 'Orange Beef', price: '16.95' },
+      ]},
+      { name: 'Shrimp', type: 'list', items: [
+        { name: 'Sweet & Sour Shrimp', price: '16.50' },
+        { name: 'Curry Shrimp', price: '16.50', spicy: true },
+        { name: 'Shrimp with Lobster Sauce', price: '16.50' },
+        { name: 'Szechuan Shrimp', price: '16.50', spicy: true },
+        { name: 'Braised Shrimp, Spicy Tomato Sauce', price: '16.50' },
+        { name: 'Coconut Shrimp', price: '17.50' },
+        { name: 'Shrimp with Garlic Sauce', price: '16.50', spicy: true },
+        { name: 'Shrimp with Snow Peas or Vegetable', price: '16.50' },
+        { name: 'Kungpao Shrimp', price: '16.50', spicy: true },
+        { name: 'Garlic Shrimp', price: '17.50' },
+      ]},
+      { name: "Chef's Special", type: 'list', items: [
+        { name: 'Happy Family', price: '16.95' },
+        { name: 'Seafood Delight', price: '17.95' },
+        { name: "Chef's Prawn", price: '18.50' },
+        { name: 'Salt & Pepper Shrimp', price: '18.50' },
+        { name: 'Salt & Pepper Squid', price: '18.50' },
+        { name: 'Four Season', price: '17.95' },
+        { name: 'Honey Walnut Shrimp', price: '18.50' },
+        { name: 'Garlic Butter Scallops', price: '19.50' },
+      ]},
+      { name: 'Noodles', type: 'list', items: [
+        { name: 'Pho — Chicken, Beef or Shrimp', price: '15.95' },
+        { name: 'Drunken Noodle — Chicken/Pork', price: '14.95', spicy: true },
+        { name: 'Drunken Noodle — Beef/Shrimp', price: '15.95', spicy: true },
+        { name: 'Zha Jiang Mian', price: '14.95' },
+        { name: 'Beef Noodle Soup', price: '14.95' },
+      ]},
+      { name: 'Teriyaki Plate', type: 'list', note: 'Served with white rice and steamed vegetable.', items: [
+        { name: 'Teriyaki Chicken', price: '14.50' },
+        { name: 'Teriyaki Shrimp', price: '15.95' },
+        { name: 'Teriyaki Tofu', price: '13.95' },
+        { name: 'Beef Bulgogi', price: '15.95' },
+      ]},
+      { name: 'Combo Special', type: 'combo', priceHeader: 'All Day — $15.95',
+        note: 'Served with white rice, egg roll, fried pork wonton, chow mein, and soup. (No soup for to-go orders.)',
+        chips: [
+          { name: 'Sliced Chicken with Mushroom' }, { name: 'Black Pepper Chicken' },
+          { name: 'House Special Dry Braised Chicken' }, { name: 'Almond or Cashew Chicken' },
+          { name: 'Kungpao Chicken or Shrimp', spicy: true }, { name: 'Chicken, Pork or Beef Broccoli' },
+          { name: 'Sweet & Sour Chicken, Shrimp or Pork' }, { name: 'Mongolian Beef or Pork' },
+          { name: 'Pepper Steak with Onion' }, { name: 'Chicken, Pork or Shrimp Garlic Sauce', spicy: true },
+          { name: 'Orange or Sesame Chicken' }, { name: "General Tao's Chicken" },
+          { name: 'BBQ Pork' }, { name: 'Vegetable Delight' }, { name: 'Chicken, Pork or Shrimp Chow Mein' },
+          { name: 'Coconut Chicken' }, { name: 'Szechuan Pork or Chicken', spicy: true },
+          { name: 'Spicy Basil Chicken', spicy: true }, { name: 'Curry Chicken or Shrimp with Onion', spicy: true },
+          { name: 'Eggplant, Spicy Ginger & Garlic Sauce', spicy: true },
+        ]},
+      { name: 'Family Dinner', type: 'family', note: 'Minimum for two or more people.', plans: [
+        { name: 'A', price: '$17.50 / person', items: 'Egg Rolls, Fried Pork Wonton, Wonton Soup, Pork Fried Rice, Chicken Chow Mein, Sweet & Sour Pork.', extras: 'For 3, add Kungpao Chicken · for 4, add Beef with Broccoli · for 5, add Shrimp with Vegetable.' },
+        { name: 'B', price: '$18.50 / person', items: 'Egg Rolls, Fried Pork Wonton, Fried Prawns, Cashew Chicken, Sweet & Sour Pork, Steamed Rice, Wonton Soup.', extras: 'For 3, add Beef with Broccoli · for 4, add Chicken Chow Mein · for 5, add Shrimp with Spicy Garlic Sauce · for 6, add Dry Braised Chicken.' },
+        { name: 'C', price: '$19.50 / person', items: 'Egg Rolls, Crab Rangoon, Fried Prawn, Wor Wonton Soup, BBQ Pork, Peking Beef, Kungpao Chicken, Steamed Rice.', extras: 'For 3, add Snow Pea Shrimp · for 4, add Pork Chow Mein · for 5, add Mandarin Chicken · for 6, add Happy Family.' },
+      ]},
+    ];
+  }
 
-      <!-- Beef -->
-      <div class="menu-panel" id="cat-beef" role="tabpanel" aria-labelledby="tab-beef" hidden>
-        <div class="menu-panel__heading">
-          <h3 class="menu-panel__zh">牛肉</h3>
-          <div class="menu-panel__en">Beef</div>
-          <div class="menu-panel__divider"></div>
-        </div>
-        <ul class="menu-list">
-          <li class="menu-item"><span class="menu-item__name">Mongolian Beef</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">15.45</span></li>
-          <li class="menu-item"><span class="menu-item__name">Beef with Broccoli or Snow Peas</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">15.45</span></li>
-          <li class="menu-item"><span class="menu-item__name">Beef with Oyster Sauce</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">15.45</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Beef with Spicy Garlic Sauce</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">15.45</span></li>
-          <li class="menu-item"><span class="menu-item__name">Pepper Steak with Onion</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">15.45</span></li>
-          <li class="menu-item"><span class="menu-item__name">House Special Cubed Steak</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">16.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Peking Beef</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">16.95</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Szechuan Beef</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">15.45</span></li>
-          <li class="menu-item"><span class="menu-item__name">Orange Beef</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">16.95</span></li>
-        </ul>
-      </div>
-
-      <!-- Shrimp -->
-      <div class="menu-panel" id="cat-shrimp" role="tabpanel" aria-labelledby="tab-shrimp" hidden>
-        <div class="menu-panel__heading">
-          <h3 class="menu-panel__zh">虾</h3>
-          <div class="menu-panel__en">Shrimp</div>
-          <div class="menu-panel__divider"></div>
-        </div>
-        <ul class="menu-list">
-          <li class="menu-item"><span class="menu-item__name">Sweet &amp; Sour Shrimp</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">16.50</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Curry Shrimp</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">16.50</span></li>
-          <li class="menu-item"><span class="menu-item__name">Shrimp with Lobster Sauce</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">16.50</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Szechuan Shrimp</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">16.50</span></li>
-          <li class="menu-item"><span class="menu-item__name">Braised Shrimp, Spicy Tomato Sauce</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">16.50</span></li>
-          <li class="menu-item"><span class="menu-item__name">Coconut Shrimp</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">17.50</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Shrimp with Garlic Sauce</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">16.50</span></li>
-          <li class="menu-item"><span class="menu-item__name">Shrimp with Snow Peas or Vegetable</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">16.50</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Kungpao Shrimp</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">16.50</span></li>
-          <li class="menu-item"><span class="menu-item__name">Garlic Shrimp</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">17.50</span></li>
-        </ul>
-      </div>
-
-      <!-- Chef's Special -->
-      <div class="menu-panel" id="cat-chef" role="tabpanel" aria-labelledby="tab-chef" hidden>
-        <div class="menu-panel__heading">
-          <h3 class="menu-panel__zh">招牌菜</h3>
-          <div class="menu-panel__en">Chef's Special</div>
-          <div class="menu-panel__divider"></div>
-        </div>
-        <ul class="menu-list">
-          <li class="menu-item"><span class="menu-item__name">Happy Family</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">16.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Seafood Delight</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">17.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Chef's Prawn</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">18.50</span></li>
-          <li class="menu-item"><span class="menu-item__name">Salt &amp; Pepper Shrimp</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">18.50</span></li>
-          <li class="menu-item"><span class="menu-item__name">Salt &amp; Pepper Squid</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">18.50</span></li>
-          <li class="menu-item"><span class="menu-item__name">Four Season</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">17.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Honey Walnut Shrimp</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">18.50</span></li>
-          <li class="menu-item"><span class="menu-item__name">Garlic Butter Scallops</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">19.50</span></li>
-        </ul>
-      </div>
-
-      <!-- Noodles -->
-      <div class="menu-panel" id="cat-noodles" role="tabpanel" aria-labelledby="tab-noodles" hidden>
-        <div class="menu-panel__heading">
-          <h3 class="menu-panel__zh">面食</h3>
-          <div class="menu-panel__en">Noodles</div>
-          <div class="menu-panel__divider"></div>
-        </div>
-        <ul class="menu-list">
-          <li class="menu-item"><span class="menu-item__name">Pho — Chicken, Beef or Shrimp</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">15.95</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Drunken Noodle — Chicken/Pork</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.95</span></li>
-          <li class="menu-item"><span class="menu-item__name"><span class="spicy" aria-label="Spicy">🌶</span>Drunken Noodle — Beef/Shrimp</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">15.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Zha Jiang Mian</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Beef Noodle Soup</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.95</span></li>
-        </ul>
-      </div>
-
-      <!-- Teriyaki Plate -->
-      <div class="menu-panel" id="cat-teriyaki" role="tabpanel" aria-labelledby="tab-teriyaki" hidden>
-        <div class="menu-panel__heading">
-          <h3 class="menu-panel__zh">照烧</h3>
-          <div class="menu-panel__en">Teriyaki Plate</div>
-          <p class="menu-panel__note">Served with white rice and steamed vegetable.</p>
-          <div class="menu-panel__divider"></div>
-        </div>
-        <ul class="menu-list">
-          <li class="menu-item"><span class="menu-item__name">Teriyaki Chicken</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">14.50</span></li>
-          <li class="menu-item"><span class="menu-item__name">Teriyaki Shrimp</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">15.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Teriyaki Tofu</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">13.95</span></li>
-          <li class="menu-item"><span class="menu-item__name">Beef Bulgogi</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price">15.95</span></li>
-        </ul>
-      </div>
-
-      <!-- Combo Special -->
-      <div class="menu-panel" id="cat-combo" role="tabpanel" aria-labelledby="tab-combo" hidden>
-        <div class="menu-panel__heading">
-          <h3 class="menu-panel__zh">套餐</h3>
-          <div class="menu-panel__en">Combo Special</div>
-          <div class="menu-panel__price-header">All Day — $15.95</div>
-          <p class="menu-panel__note">Served with white rice, egg roll, fried pork wonton, chow mein, and soup. (No soup for to-go orders.)</p>
-          <div class="menu-panel__divider"></div>
-        </div>
-        <ul class="combo-chips">
-          <li>Sliced Chicken with Mushroom</li>
-          <li>Black Pepper Chicken</li>
-          <li>House Special Dry Braised Chicken</li>
-          <li>Almond or Cashew Chicken</li>
-          <li><span class="spicy" aria-label="Spicy">🌶</span>Kungpao Chicken or Shrimp</li>
-          <li>Chicken, Pork or Beef Broccoli</li>
-          <li>Sweet &amp; Sour Chicken, Shrimp or Pork</li>
-          <li>Mongolian Beef or Pork</li>
-          <li>Pepper Steak with Onion</li>
-          <li><span class="spicy" aria-label="Spicy">🌶</span>Chicken, Pork or Shrimp Garlic Sauce</li>
-          <li>Orange or Sesame Chicken</li>
-          <li>General Tao's Chicken</li>
-          <li>BBQ Pork</li>
-          <li>Vegetable Delight</li>
-          <li>Chicken, Pork or Shrimp Chow Mein</li>
-          <li>Coconut Chicken</li>
-          <li><span class="spicy" aria-label="Spicy">🌶</span>Szechuan Pork or Chicken</li>
-          <li><span class="spicy" aria-label="Spicy">🌶</span>Spicy Basil Chicken</li>
-          <li><span class="spicy" aria-label="Spicy">🌶</span>Curry Chicken or Shrimp with Onion</li>
-          <li><span class="spicy" aria-label="Spicy">🌶</span>Eggplant, Spicy Ginger &amp; Garlic Sauce</li>
-        </ul>
-      </div>
-
-      <!-- Family Dinner -->
-      <div class="menu-panel" id="cat-family" role="tabpanel" aria-labelledby="tab-family" hidden>
-        <div class="menu-panel__heading">
-          <h3 class="menu-panel__zh">合家欢</h3>
-          <div class="menu-panel__en">Family Dinner</div>
-          <p class="menu-panel__note">Minimum for two or more people.</p>
-          <div class="menu-panel__divider"></div>
-        </div>
-        <ul class="family-grid">
-          <li class="family-plan">
-            <div class="family-plan__head">
-              <span class="family-plan__name">Dinner A</span>
-              <span class="family-plan__price">$17.50 / person</span>
-            </div>
-            <p class="family-plan__items">Egg Rolls, Fried Pork Wonton, Wonton Soup, Pork Fried Rice, Chicken Chow Mein, Sweet &amp; Sour Pork.</p>
-            <p class="family-plan__extras">For 3, add Kungpao Chicken · for 4, add Beef with Broccoli · for 5, add Shrimp with Vegetable.</p>
-          </li>
-          <li class="family-plan">
-            <div class="family-plan__head">
-              <span class="family-plan__name">Dinner B</span>
-              <span class="family-plan__price">$18.50 / person</span>
-            </div>
-            <p class="family-plan__items">Egg Rolls, Fried Pork Wonton, Fried Prawns, Cashew Chicken, Sweet &amp; Sour Pork, Steamed Rice, Wonton Soup.</p>
-            <p class="family-plan__extras">For 3, add Beef with Broccoli · for 4, add Chicken Chow Mein · for 5, add Shrimp with Spicy Garlic Sauce · for 6, add Dry Braised Chicken.</p>
-          </li>
-          <li class="family-plan">
-            <div class="family-plan__head">
-              <span class="family-plan__name">Dinner C</span>
-              <span class="family-plan__price">$19.50 / person</span>
-            </div>
-            <p class="family-plan__items">Egg Rolls, Crab Rangoon, Fried Prawn, Wor Wonton Soup, BBQ Pork, Peking Beef, Kungpao Chicken, Steamed Rice.</p>
-            <p class="family-plan__extras">For 3, add Snow Pea Shrimp · for 4, add Pork Chow Mein · for 5, add Mandarin Chicken · for 6, add Happy Family.</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="menu__footer-cta">
-      <a class="cta-pill" href="https://www.doordash.com/store/chan-pheng%E2%80%99s-mandarin-cuisine-chico-34992320/?utm_campaign=gpa&amp;pickup=true" target="_blank" rel="noopener">Order the full menu on DoorDash →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== VISIT ===== -->
-<section class="visit" id="visit" data-reveal>
-  <div class="visit__header">
-    <div class="visit__eyebrow">来 访</div>
-    <h2 class="visit__title">Come <em>visit us</em></h2>
-  </div>
-  <div class="visit__grid">
-    <div class="visit__info">
-      <div class="info-block">
-        <h3>Hours</h3>
-        <ul>
-          <li>Tuesday – Sunday · 11:00 AM – 8:30 PM</li>
-          <li>Monday · Closed</li>
-        </ul>
-      </div>
-      <div class="info-block">
-        <h3>Find Us</h3>
-        <p>1140 Mangrove Ave, Suite E<br>Chico, CA 95926</p>
-      </div>
-      <div class="info-block">
-        <h3>Call</h3>
-        <p><a href="tel:+15308946888">(530) 894-6888</a></p>
-      </div>
-      <div class="info-block">
-        <h3>Order</h3>
-        <p><a class="cta-doordash" href="https://www.doordash.com/store/chan-pheng%E2%80%99s-mandarin-cuisine-chico-34992320/?utm_campaign=gpa&amp;pickup=true" target="_blank" rel="noopener">Order on DoorDash</a></p>
-      </div>
-    </div>
-    <div class="visit__map">
-      <iframe title="Map to Chanpheng's Mandarin Cuisine — 1140 Mangrove Ave, Chico CA" src="https://maps.google.com/maps?q=1140%20Mangrove%20Ave%20Suite%20E%20Chico%20CA%2095926&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" loading="lazy"></iframe>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <div class="footer__grid">
-    <div class="footer__brand">
-      <div class="footer__brand-row">
-        <span class="nav__logo" aria-hidden="true"><span>福</span></span>
-        <div>
-          <div class="footer__name">Chanpheng's <em>Mandarin</em><br>Cuisine</div>
-          <div class="footer__zh">正宗中国菜</div>
-        </div>
-      </div>
-      <p class="footer__tagline">Fresh, made-to-order Mandarin &amp; Szechuan cooking. Family-owned in Chico, California.</p>
-    </div>
-    <div class="footer__col">
-      <h4>Find Us</h4>
-      <p>1140 Mangrove Ave, Suite E<br>Chico, CA 95926</p>
-    </div>
-    <div class="footer__col">
-      <h4>Hours</h4>
-      <ul>
-        <li>Tue – Sun · 11:00 AM – 8:30 PM</li>
-        <li>Monday · Closed</li>
-      </ul>
-      <p style="margin-top:10px"><a href="tel:+15308946888">(530) 894-6888</a></p>
-    </div>
-    <div class="footer__col footer__cta">
-      <h4>Order</h4>
-      <a class="cta-doordash" href="https://www.doordash.com/store/chan-pheng%E2%80%99s-mandarin-cuisine-chico-34992320/?utm_campaign=gpa&amp;pickup=true" target="_blank" rel="noopener">Order on DoorDash</a>
-    </div>
-  </div>
-  <div class="footer__base">
-    <span>© <span id="footer-year">2026</span> Chanpheng's Mandarin Cuisine. All rights reserved.</span>
-    <span>Chico, California</span>
-  </div>
-</footer>
-
-<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
-
+  renderVals() {
+    const cats = this.categories;
+    const activeIdx = this.state.active;
+    const zhMap = {
+      'Appetizers': '前菜', 'Soup': '汤', 'Fried Rice & Chow Mein': '饭面',
+      'Egg Foo Young': '芙蓉蛋', 'Vegetable': '素菜', 'Pork': '猪肉',
+      'Poultry': '鸡鸭', 'Beef': '牛肉', 'Shrimp': '虾',
+      "Chef's Special": '招牌菜', 'Noodles': '面食', 'Teriyaki Plate': '照烧',
+      'Combo Special': '套餐', 'Family Dinner': '合家欢',
+    };
+    const tabBase = 'cursor:pointer; padding:10px 17px; border-radius:6px; font-family:Work Sans,sans-serif; font-size:13px; letter-spacing:.06em; text-transform:uppercase; transition:all .2s ease;';
+    const tabs = cats.map((c, i) => ({
+      name: c.name,
+      zh: zhMap[c.name] || '',
+      onClick: () => this.setState({ active: i }),
+      style: i === activeIdx
+        ? tabBase + ' border:1px solid #C9A24B; background:#C9A24B; color:#1A1410; font-weight:600;'
+        : tabBase + ' border:1px solid rgba(201,162,75,0.3); background:transparent; color:rgba(250,246,238,0.78); font-weight:500;',
+    }));
+    const a = cats[activeIdx] || cats[0];
+    const active = {
+      name: a.name,
+      zh: zhMap[a.name] || '',
+      note: a.note || '',
+      priceHeader: a.priceHeader || '',
+      isList: a.type === 'list',
+      isCombo: a.type === 'combo',
+      isFamily: a.type === 'family',
+      items: a.items || [],
+      chips: a.chips || [],
+      plans: a.plans || [],
+    };
+    const R = React.createElement;
+    const dishData = [
+      { name: 'Drunken Noodle', img: 'images/dish-noodle.avif', ar: 0.668 },
+      { name: "General Tao's Chicken", img: 'images/dish-generaltao.avif', ar: 1.333 },
+      { name: 'Pan-Fried Potstickers', img: 'images/dish-potsticker.avif', ar: 1.348 },
+      { name: 'Beef Pho', img: 'images/dish-pho.avif', ar: 1.302 },
+      { name: 'Beef Noodle Soup', img: 'images/dish-beefnoodle.webp', ar: 1.5 },
+      { name: 'Orange Chicken', img: 'images/dish-orangechicken.webp', ar: 1.5 },
+      { name: 'Salt & Pepper Shrimp', img: 'images/dish-saltpeppershrimp.webp', ar: 1.5 },
+      { name: 'Crispy Sweet & Sour Eggplant', img: 'images/dish-eggplant.webp', ar: 1.44 },
+      { name: 'Basil Fried Rice', img: 'images/dish-basilrice.webp', ar: 1.623 },
+      { name: 'Singapore Style Rice Noodle', img: 'images/dish-singapore.webp', ar: 1.511 },
+    ];
+    const touch = !!(window.matchMedia && window.matchMedia('(hover: none)').matches);
+    const makeTile = (d, idx) => {
+      const hov = this.state.hovered === idx;
+      const bobDelay = (idx % 5) * 0.7;
+      const tStyle = {
+        position: 'relative', flex: '0 0 auto', height: 'var(--tile-h, 56vh)', aspectRatio: String(d.ar),
+        cursor: 'pointer', zIndex: hov ? 5 : 1,
+        animation: touch ? 'none' : ('tileBob 6s ease-in-out ' + bobDelay + 's infinite'),
+      };
+      const innerS = {
+        position: 'absolute', inset: 0, overflow: 'hidden', borderRadius: '14px',
+        border: '1px solid ' + (hov ? 'rgba(231,199,123,0.9)' : 'rgba(201,162,75,0.4)'),
+        boxShadow: hov
+          ? '0 30px 70px rgba(0,0,0,0.55), 0 0 0 4px rgba(201,162,75,0.18)'
+          : '0 18px 48px rgba(0,0,0,0.42)',
+        transform: hov ? 'scale(1.05)' : 'scale(1)',
+        transition: 'transform .45s cubic-bezier(.22,.61,.36,1), box-shadow .45s ease, border-color .45s ease',
+      };
+      const imgS = { width: '100%', height: '100%', objectFit: 'cover', display: 'block', filter: hov ? 'saturate(1.08) brightness(1.04)' : 'saturate(1)', transition: 'filter .45s ease' };
+      // soft inner vignette for depth
+      const vignS = { position: 'absolute', inset: 0, borderRadius: '14px', boxShadow: 'inset 0 0 60px rgba(18,12,9,0.45)', pointerEvents: 'none' };
+      // slow diagonal gleam sweeping across each tile
+      const gleamWrap = { position: 'absolute', inset: 0, overflow: 'hidden', borderRadius: '14px', pointerEvents: 'none' };
+      const gleamS = {
+        position: 'absolute', top: '-20%', left: 0, width: '40%', height: '140%',
+        background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent)',
+        animation: 'tileGleam 7s ease-in-out ' + (idx % 5) * 1.1 + 's infinite',
+      };
+      const capS = {
+        position: 'absolute', left: 0, right: 0, bottom: 0, padding: '26px 10px 13px',
+        background: 'linear-gradient(0deg, rgba(18,12,9,0.92), rgba(18,12,9,0))',
+        color: '#FAF6EE', fontFamily: 'Playfair Display, serif', fontStyle: 'italic',
+        fontSize: '15px', textAlign: 'center', opacity: hov ? 1 : 0, transition: 'opacity .3s ease',
+      };
+      const handlers = touch
+        ? { onClick: () => this.setState((s) => { const stop = !s.marqueeStopped; return { marqueeStopped: stop, hovered: stop ? idx : null }; }) }
+        : { onMouseEnter: () => this.setState({ hovered: idx }), onMouseLeave: () => this.setState({ hovered: null }) };
+      const inner = [
+        R('img', { key: 'img', src: d.img, alt: d.name, style: imgS }),
+        R('div', { key: 'vig', style: vignS }),
+      ];
+      if (!touch) inner.push(R('div', { key: 'gleam', style: gleamWrap }, R('div', { style: gleamS })));
+      inner.push(R('div', { key: 'cap', style: capS }, d.name));
+      return R('div', Object.assign({ key: idx, style: tStyle }, handlers),
+        R('div', { style: innerS }, inner)
+      );
+    };
+    this.dishCount = dishData.length;
+    const loop = dishData.concat(dishData, dishData);
+    const trackStyle = {
+      display: 'inline-flex', height: '100%', gap: '16px', alignItems: 'center',
+      willChange: 'transform',
+    };
+    const marqueeTrack = !this.state.ready ? null : R('div', {
+      style: trackStyle, ref: this.trackRef,
+    }, loop.map((d, idx) => makeTile(d, idx)));
+    return {
+      tabs, active, marqueeTrack, rootRef: this.rootRef,
+      mqNext: this.mqNext, mqPrev: this.mqPrev,
+      mqHint: 'Hover to pause \u00b7 arrows to browse',
+      showFavorites: this.props.showFavorites ?? true,
+      showWatermarks: this.props.showWatermarks ?? true,
+    };
+  }
+}
+</script>
 </body>
 </html>
