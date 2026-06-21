@@ -16,7 +16,7 @@
 <meta property="og:title" content="Chanpheng's Mandarin Cuisine — Authentic Mandarin in Chico, CA">
 <meta property="og:description" content="Family-run Mandarin restaurant in Chico, CA. Time-honored recipes, fresh ingredients.">
 <meta property="og:url" content="https://cpmandarincuisine.com/">
-<meta property="og:image" content="https://cpmandarincuisine.com/assets/og-cover.jpg">
+<meta property="og:image" content="https://cpmandarincuisine.com/assets/img/og-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <script src="./support.js"></script>
 </head>
@@ -44,6 +44,96 @@
   @keyframes tileGleam { 0% { transform: translateX(-120%) skewX(-18deg); } 60%,100% { transform: translateX(320%) skewX(-18deg); } }
   [data-fav-grid] > * { overflow: hidden !important; border-radius: 14px; min-width: 0; }
   [data-fav-grid] image-slot { width: 100% !important; height: 100% !important; min-width: 0 !important; min-height: 0 !important; display: block !important; }
+  @media (min-width: 1100px) {
+    #top {
+      min-height: 88vh !important;
+      align-items: center !important;
+    }
+    [data-hero-marquee] {
+      --tile-h: min(42vh, 390px);
+      align-items: center !important;
+    }
+    [data-hero-text] {
+      padding: 84px 40px 40px !important;
+      max-width: 560px !important;
+      transform: translateY(18px);
+    }
+    [data-hero-text] h1 {
+      font-size: clamp(40px, 5.2vw, 62px) !important;
+      line-height: 1.06 !important;
+      margin-bottom: 18px !important;
+      letter-spacing: 0 !important;
+    }
+    [data-hero-text] p {
+      font-size: 16.5px !important;
+      line-height: 1.55 !important;
+      margin-bottom: 28px !important;
+    }
+    #about,
+    #visit {
+      min-height: 82vh;
+      display: grid !important;
+      align-items: center !important;
+      padding-top: 72px !important;
+      padding-bottom: 72px !important;
+      scroll-margin-top: 76px;
+    }
+    #about {
+      max-width: 1060px !important;
+      gap: 52px !important;
+    }
+    #about h2,
+    #visit h2 {
+      font-size: clamp(28px, 3vw, 38px) !important;
+      line-height: 1.14 !important;
+    }
+    #about p {
+      font-size: 16.5px !important;
+      line-height: 1.68 !important;
+    }
+    [data-fav-grid] {
+      height: min(42vh, 320px) !important;
+    }
+    #menu {
+      padding: 68px 0 76px !important;
+      margin-top: 16px !important;
+      scroll-margin-top: 76px;
+    }
+    #menu > div {
+      max-width: 1120px !important;
+    }
+    #menu > div > div:first-child {
+      margin-bottom: 26px !important;
+    }
+    #menu > div > div:first-child > div:first-child {
+      font-size: clamp(38px, 4.8vw, 56px) !important;
+    }
+    #menu > div > div:first-child p {
+      margin-top: 14px !important;
+    }
+    #menu button {
+      padding: 8px 13px !important;
+      font-size: 12px !important;
+    }
+    #menu [data-menu-grid] {
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)) !important;
+      gap: 4px 42px !important;
+    }
+    #menu [data-menu-grid] > div {
+      padding-top: 9px !important;
+      padding-bottom: 9px !important;
+    }
+    #visit {
+      max-width: 1060px !important;
+    }
+    [data-visit-grid] {
+      gap: 44px !important;
+      align-items: center !important;
+    }
+    [data-visit-grid] > div:last-child {
+      min-height: min(48vh, 360px) !important;
+    }
+  }
   @media (max-width: 1099px) {
     nav[data-nav] { padding: 14px 20px !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; background: rgba(26,20,16,0.94) !important; }
     [data-nav-links] { display: none !important; }
@@ -409,6 +499,25 @@ class Component extends DCLogic {
     };
     // wait a tick so refs/DOM are settled
     setTimeout(run, 60);
+    setTimeout(() => {
+      if (!window.location.hash) return;
+      const id = window.location.hash.slice(1);
+      const target = document.getElementById(id);
+      if (!target) return;
+      target.style.opacity = '1';
+      target.style.transform = 'none';
+      target.scrollIntoView({ block: 'start' });
+    }, 180);
+    setTimeout(() => {
+      const visible = document.querySelectorAll('[data-reveal]');
+      visible.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.style.opacity = '1';
+          el.style.transform = 'none';
+        }
+      });
+    }, 700);
   }
 
   componentWillUnmount() {
@@ -600,16 +709,16 @@ class Component extends DCLogic {
     };
     const R = React.createElement;
     const dishData = [
-      { name: 'Drunken Noodle', img: 'images/dish-noodle.avif', ar: 0.668 },
-      { name: "General Tao's Chicken", img: 'images/dish-generaltao.avif', ar: 1.333 },
-      { name: 'Pan-Fried Potstickers', img: 'images/dish-potsticker.avif', ar: 1.348 },
-      { name: 'Beef Pho', img: 'images/dish-pho.avif', ar: 1.302 },
-      { name: 'Beef Noodle Soup', img: 'images/dish-beefnoodle.webp', ar: 1.5 },
-      { name: 'Orange Chicken', img: 'images/dish-orangechicken.webp', ar: 1.5 },
-      { name: 'Salt & Pepper Shrimp', img: 'images/dish-saltpeppershrimp.webp', ar: 1.5 },
-      { name: 'Crispy Sweet & Sour Eggplant', img: 'images/dish-eggplant.webp', ar: 1.44 },
-      { name: 'Basil Fried Rice', img: 'images/dish-basilrice.webp', ar: 1.623 },
-      { name: 'Singapore Style Rice Noodle', img: 'images/dish-singapore.webp', ar: 1.511 },
+      { name: 'Drunken Noodle', img: './assets/img/dishes/noodle.avif', ar: 0.668 },
+      { name: "General Tao's Chicken", img: './assets/img/dishes/general-tao.avif', ar: 1.333 },
+      { name: 'Pan-Fried Potstickers', img: './assets/img/dishes/potsticker.avif', ar: 1.348 },
+      { name: 'Beef Pho', img: './assets/img/dishes/pho.avif', ar: 1.302 },
+      { name: 'Beef Noodle Soup', img: './assets/img/dishes/beef-noodle.webp', ar: 1.5 },
+      { name: 'Orange Chicken', img: './assets/img/dishes/orange-chicken.webp', ar: 1.5 },
+      { name: 'Salt & Pepper Shrimp', img: './assets/img/dishes/salt-pepper-shrimp.webp', ar: 1.5 },
+      { name: 'Crispy Sweet & Sour Eggplant', img: './assets/img/dishes/eggplant.webp', ar: 1.44 },
+      { name: 'Basil Fried Rice', img: './assets/img/dishes/basil-rice.webp', ar: 1.623 },
+      { name: 'Singapore Style Rice Noodle', img: './assets/img/dishes/singapore.webp', ar: 1.511 },
     ];
     const touch = !!(window.matchMedia && window.matchMedia('(hover: none)').matches);
     const makeTile = (d, idx) => {
