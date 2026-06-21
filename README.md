@@ -2,7 +2,7 @@
 
 The one-page brochure site for [cpmandarincuisine.com](https://cpmandarincuisine.com/).
 
-Plain HTML + CSS, with the exported page runtime kept in `support.js`. No build step and no `npm install` required to deploy.
+Plain HTML + CSS, with the exported page runtime kept in `assets/js/`. No build step and no `npm install` required to deploy.
 
 ## File layout
 
@@ -16,17 +16,17 @@ Plain HTML + CSS, with the exported page runtime kept in `support.js`. No build 
 ├── site.webmanifest        ← PWA basics
 ├── robots.txt              ← tells Google what to crawl
 ├── sitemap.xml             ← Google's roadmap of the site
-├── support.js              ← exported page runtime used by index.html
-├── image-slot.js           ← image component used by the favorite-dishes grid
 ├── image-slots.state.json  ← persisted favorite-dish image data
 ├── assets/
 │   ├── css/main.css        ← every visual style lives here
+│   ├── js/
+│   │   ├── support.js      ← exported page runtime used by index.html
+│   │   └── image-slot.js   ← image component used by the favorite-dishes grid
 │   └── img/
 │       ├── og-cover.jpg    ← social-share preview (Facebook, Twitter, etc.)
 │       └── dishes/         ← the 10 dish photos
 ├── netlify.toml            ← Netlify publish settings (no build step)
-├── .netlifyignore          ← keeps planning/local metadata off the live site
-└── .planning/              ← project planning docs (not deployed)
+└── .netlifyignore          ← keeps local metadata off the live site
 ```
 
 ## How to make common edits

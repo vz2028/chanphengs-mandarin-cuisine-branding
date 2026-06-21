@@ -21,7 +21,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://cpmandarincuisine.com/assets/img/og-cover.jpg">
-<script src="./support.js"></script>
+<script src="./assets/js/support.js"></script>
 </head>
 <body>
 <x-dc>
@@ -281,9 +281,9 @@
     </div>
     <sc-if value="{{ showFavorites }}" hint-placeholder-val="{{ true }}">
     <div data-fav-grid style="position:relative; z-index:1; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:14px; height:380px;">
-      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="fav-1" shape="rounded" radius="14" fit="cover" placeholder="Dish photo" style="grid-row:1 / span 2; width:100%; height:100%;" hint-size="100%,100%"></x-import>
-      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="fav-2" shape="rounded" radius="14" fit="cover" placeholder="Dish" style="width:100%; height:100%;" hint-size="100%,100%"></x-import>
-      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="fav-3" shape="rounded" radius="14" fit="cover" placeholder="Dish" style="width:100%; height:100%;" hint-size="100%,100%"></x-import>
+      <x-import component-from-global-scope="image-slot" from="./assets/js/image-slot.js" id="fav-1" shape="rounded" radius="14" fit="cover" placeholder="Dish photo" style="grid-row:1 / span 2; width:100%; height:100%;" hint-size="100%,100%"></x-import>
+      <x-import component-from-global-scope="image-slot" from="./assets/js/image-slot.js" id="fav-2" shape="rounded" radius="14" fit="cover" placeholder="Dish" style="width:100%; height:100%;" hint-size="100%,100%"></x-import>
+      <x-import component-from-global-scope="image-slot" from="./assets/js/image-slot.js" id="fav-3" shape="rounded" radius="14" fit="cover" placeholder="Dish" style="width:100%; height:100%;" hint-size="100%,100%"></x-import>
     </div>
     </sc-if>
   </section>

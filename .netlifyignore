@@ -1,7 +1,5 @@
 # Repo metadata and planning — not part of the live site
 .github/
-.planning/
-.claude/
 README.md
 .gitignore
 netlify.toml
