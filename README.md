@@ -1,4 +1,4 @@
-# Chanpheng's Mandarin Cuisine — Website
+# Chan Pheng's Mandarin Cuisine — Website
 
 The one-page brochure site for [cpmandarincuisine.com](https://cpmandarincuisine.com/).
 
