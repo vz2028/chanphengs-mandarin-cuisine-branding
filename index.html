@@ -813,24 +813,26 @@ class Component extends DCLogic {
       plans: a.plans || [],
     };
     const R = React.createElement;
+    // w/h are the true pixel dimensions of each file; they drive both the
+    // tile's CSS aspect-ratio and the <img> width/height attributes (CLS).
     const dishData = [
-      { name: 'Drunken Noodle', img: './assets/img/dishes/noodle.avif', ar: 0.668 },
-      { name: "General Tao's Chicken", img: './assets/img/dishes/general-tao.avif', ar: 1.333 },
-      { name: 'Pan-Fried Potstickers', img: './assets/img/dishes/potsticker.avif', ar: 1.348 },
-      { name: 'Beef Pho', img: './assets/img/dishes/pho.avif', ar: 1.302 },
-      { name: 'Beef Noodle Soup', img: './assets/img/dishes/beef-noodle.webp', ar: 1.5 },
-      { name: 'Orange Chicken', img: './assets/img/dishes/orange-chicken.webp', ar: 1.5 },
-      { name: 'Salt & Pepper Shrimp', img: './assets/img/dishes/salt-pepper-shrimp.webp', ar: 1.5 },
-      { name: 'Crispy Sweet & Sour Eggplant', img: './assets/img/dishes/eggplant.webp', ar: 1.44 },
-      { name: 'Basil Fried Rice', img: './assets/img/dishes/basil-rice.webp', ar: 1.623 },
-      { name: 'Singapore Style Rice Noodle', img: './assets/img/dishes/singapore.webp', ar: 1.511 },
+      { name: 'Drunken Noodle', img: './assets/img/dishes/noodle.avif', w: 776, h: 1162 },
+      { name: "General Tao's Chicken", img: './assets/img/dishes/general-tao.avif', w: 1548, h: 1161 },
+      { name: 'Pan-Fried Potstickers', img: './assets/img/dishes/potsticker.avif', w: 1564, h: 1160 },
+      { name: 'Beef Pho', img: './assets/img/dishes/pho.avif', w: 1512, h: 1161 },
+      { name: 'Beef Noodle Soup', img: './assets/img/dishes/beef-noodle.webp', w: 612, h: 408 },
+      { name: 'Orange Chicken', img: './assets/img/dishes/orange-chicken.webp', w: 612, h: 408 },
+      { name: 'Salt & Pepper Shrimp', img: './assets/img/dishes/salt-pepper-shrimp.webp', w: 612, h: 408 },
+      { name: 'Crispy Sweet & Sour Eggplant', img: './assets/img/dishes/eggplant.webp', w: 612, h: 425 },
+      { name: 'Basil Fried Rice', img: './assets/img/dishes/basil-rice.webp', w: 612, h: 377 },
+      { name: 'Singapore Style Rice Noodle', img: './assets/img/dishes/singapore.webp', w: 612, h: 405 },
     ];
     const touch = !!(window.matchMedia && window.matchMedia('(hover: none)').matches);
     const makeTile = (d, idx) => {
       const hov = this.state.hovered === idx;
       const bobDelay = (idx % 5) * 0.7;
       const tStyle = {
-        position: 'relative', flex: '0 0 auto', height: 'var(--tile-h, 56vh)', aspectRatio: String(d.ar),
+        position: 'relative', flex: '0 0 auto', height: 'var(--tile-h, 56vh)', aspectRatio: d.w + ' / ' + d.h,
         cursor: 'pointer', zIndex: hov ? 5 : 1,
         animation: touch ? 'none' : ('tileBob 6s ease-in-out ' + bobDelay + 's infinite'),
       };
@@ -862,8 +864,11 @@ class Component extends DCLogic {
       const handlers = touch
         ? { onClick: () => this.setState((s) => { const stop = !s.marqueeStopped; return { marqueeStopped: stop, hovered: stop ? idx : null }; }) }
         : { onMouseEnter: () => this.setState({ hovered: idx }), onMouseLeave: () => this.setState({ hovered: null }) };
+      // Only the first tile is eager — it's the one on screen at load.
+      const imgAttrs = { key: 'img', src: d.img, alt: d.name, width: d.w, height: d.h, decoding: 'async', style: imgS };
+      if (idx !== 0) imgAttrs.loading = 'lazy';
       const inner = [
-        R('img', { key: 'img', src: d.img, alt: d.name, style: imgS }),
+        R('img', imgAttrs),
         R('div', { key: 'vig', style: vignS }),
       ];
       if (!touch) inner.push(R('div', { key: 'gleam', style: gleamWrap }, R('div', { style: gleamS })));
