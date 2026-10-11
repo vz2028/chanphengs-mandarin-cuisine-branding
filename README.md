@@ -24,7 +24,7 @@ Plain HTML + CSS, with the exported page runtime kept in `assets/js/`. No build 
 │   │   └── image-slot.js   ← image component used by the favorite-dishes grid
 │   └── img/
 │       ├── og-cover.jpg    ← social-share preview (Facebook, Twitter, etc.)
-│       └── dishes/         ← the 10 dish photos
+│       └── dishes/         ← the dish photos
 ├── netlify.toml            ← Netlify publish settings (no build step)
 └── .netlifyignore          ← keeps local metadata off the live site
 ```
